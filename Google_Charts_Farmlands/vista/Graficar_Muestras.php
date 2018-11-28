@@ -13,7 +13,7 @@
     <body>
     <link rel="stylesheet" href="bootstrap.css">	
     <nav class="navbar navbar-expand-lg navbar-success bg-success">
-        <a class="navbar-brand" href="#"> <img src="pl.png" width="30" height="30" class="d-inline-block align-top" alt="">tabla de temperatura</a>
+        <a class="navbar-brand" href="#"> <img src="pl.png" width="30" height="30" class="d-inline-block align-top" alt="">Graficar Muestras</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span   class="navbar-toggler-icon"></span>
         </button>
@@ -59,25 +59,34 @@
                         $('#formulario').attr('action', 'comboChart_Humedad.php');
                 } else if (valor === "4") {
                         $('#formulario').attr('action', 'comboChart_PA.php');
+                } else {
+                    $('#formulario').attr('action', '#');
                 }
             });
+            $(document).on('submit', '#formulario', function(event){
+                $('#selectedvalue').val($("#TipoGraf option:selected").val());
+                var valor = $("#selectedvalue").val();
+                if (valor === "0") {
+                        alert("Seleccione una variable");
+                }
+            })
         </script>
         <form id="formulario" method="post" action="" style="width: 50%; height: 70%; margin:4%  auto 0 auto ">
-            <label for="limite" class="card-title">Digite el numero de muestras que desea graficar</label>
+            <label for="limite" class="card-title">Digite la variable y el numero de muestras que desea graficar</label>
             <h6 class="card-subtitle mb-2 text-muted">(Se graficaran de las ultimas muestras tomadas, dependiendo el limite que desee)</h6>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="TipoGraf">Variable</label>
                 </div>
                 <select class="custom-select" id="TipoGraf">
-                    <option selected>Seleccione la variable que quiere graficar</option>
+                    <option selected value="0">Seleccione la variable que quiere graficar</option>
                     <option value="1">PH</option>
                     <option value="2">Temperatura</option>
                     <option value="3">Humedad</option>
                     <option value="4">Presion Atmosferica</option>
                 </select>
             </div>
-            <input type="number" name="limite" id="limite" class="custom-select" placeholder="Digite aqui un numero">
+            <input type="number" name="limite" id="limite" class="custom-select" placeholder="Digite aqui un numero" required>
             <input style="width: 50%; height: 70%; margin:4%  45% 0 25% " type="submit" class="btn btn-success" value="Aceptar" id="boton">
             <hidden id="selectedvalue"></hidden>
         </form>

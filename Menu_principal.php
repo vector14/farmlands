@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="bootstrap.css">
   	<link rel="stylesheet" href="css2/menu_principal.css">
+  	<link rel="stylesheet" href="css2/menu_principal2.css">
 
     <title>Menu Principal</title>
   </head>
@@ -23,8 +24,8 @@
 
    <nav class="navbar navbar-expand-lg navbar-success bg-success">
         <a class="navbar-brand" href="#"> <img src="pl.png" width="30" height="30" class="d-inline-block align-top" alt="">Menu Principal: Administrador</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span   class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" style="outline:0px" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i id="icon-toggler" style="color:#fff; font-size:22px" class="fas fa-bars"></i>
         </button>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -51,62 +52,13 @@
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Escribe que buscas" aria-label="Search">
-      <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
-    </form>
+            <a href="cerrar.php"> <button class="btn btn-success" type="submit" ><i class="fas fa-power-off"></i> Cerrar Sesión</button></a>
+            </form>
         </div>
       </nav>
-
-<div class="container">
-  <div class="opcion dropright" style="max-width: 420px;">
-  <img data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="assets/img/OpcionUsuarios.jpg" width="130px" height="auto" style="z-index:-2;"/>
-    <span >Usuarios</span>
-    <div class="dropdown-menu">
-    <a  class="dropdown-item" href="consultar_administrador.php">Administrador</a>
-    <a class="dropdown-item" href="consultar_granjero.php">Granjero</a>
-    <a class="dropdown-item" href="consultar_comprador.php">Comprador</a>
-    <a class="dropdown-item" href="consultar_biologo.php">Biologo</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Acerca de esta opcion</a>
-</div>
-</div>
-<!--
-    <div class="opcion dropright" style="max-width: 330px;">
-    <img data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="assets/img/OpcionSubasta.jpg" width="130px" height="145" style="z-index:-2;"/>
-    <span>Subasta</span>
-    <div class="dropdown-menu">
-    <a class="dropdown-item" href="consultar_subasta.php">Subastas</a>
-    <a class="dropdown-item" href="consultar_oferta_para_subasta.php">Ofertas de subastas</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Acerca de esta opcion</a>
-  </div>
-  </div>    -->
-      <div class="opcion dropright" style="max-width: 330px;">
-    <img data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="assets/img/OpcionCultivo.jpg" width="130px" height="145" style="z-index:-2;"/>
-    <span>Cultivo</span>
-    <div class="dropdown-menu">
-    <a class="dropdown-item" href="consultar_cultivo.php">Cultivos</a>
-    <a class="dropdown-item" href="consultar_seccion_de_cultivo.php">Secciones de cultivo</a>
-    <a class="dropdown-item" href="consultar_muestra.php">Muestras Suelo</a>
-    <a class="dropdown-item" href="consultar_muestrap.php">Muestras Planta</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Acerca de esta opcion</a>
-  </div>
-  </div> 
-   <div  class="opcion dropright" style="max-width: 330px;">
-    <img data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="assets/img/OpcionGranja.jpg" width="130px" height="145" style="z-index:-2;"/>
-    <span>Granja</span>
-    <div class="dropdown-menu">
-    <a class="dropdown-item" href="consultar_granja.php">Granjas</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Acerca de esta opcion</a>
-  </div>
-  
-  </div>
-<div>
         <!------------------ Efecto Hover 16 --------------->
-       <div class="container mt-40">
-            <h3 class="text-center">Prueba menu v2.0</h3>
+       <div class="container mt-40" style="margin-bottom: 20px">
+            <h3 class="text-center">Bienvenido! Escoja una opcion</h3>
             <div class="row mt-30">
                 <div class="col-md-4 col-sm-6">
                     <div class="box16">
@@ -117,37 +69,38 @@
                             <ul class="social">
                                 <li><a data-toggle="tooltip" data-placement="bottom" title="Administrador" href="consultar_administrador.php"><i class="fas fa-users-cog"></i></a></li>
                                 <li><a data-toggle="tooltip" data-placement="bottom" title="Biologo" href="consultar_biologo.php"><i class="fas fa-atom"></i></i></a></li>
-                                <li><a data-toggle="tooltip" data-placement="bottom" title="Granjero" href="consultar_granjero.php" href="#"><i class="fas fa-child"></i></a></li>
+                                <li><a data-toggle="tooltip" data-placement="bottom" title="Granjero" href="consultar_granjero.php"><i class="fas fa-child"></i></a></li>
+                                <li><a data-toggle="tooltip" data-placement="bottom" title="Acerca de esta opcion" href="#"><i class="fas fa-info"></i></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="box16">
-                        <img src="http://bestjquery.com/tutorial/hover-effect/demo118/images/img-2.jpg">
+                        <img src="assets/icons/Granja.jpg">
                         <div class="box-content">
-                            <h3 class="title">Kristiana</h3>
-                            <span class="post">Web Designer</span>
+                            <h3 class="title">Granja</h3>
+                            <span class="post">Opciones</span>
                             <ul class="social">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a data-toggle="tooltip" data-placement="bottom" title="Granjas" href="consultar_granja.php"><i class="fas fa-warehouse"></i></a></li>
+                                <li><a data-toggle="tooltip" data-placement="bottom" title="Producto" href="consultar_producto.php"><i class="far fa-lemon"></i></a></li>
+                                <li><a data-toggle="tooltip" data-placement="bottom" title="Acerca de esta opcion" href="#"><i class="fas fa-info"></i></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="box16">
-                        <img src="http://bestjquery.com/tutorial/hover-effect/demo118/images/img-3.jpg">
+                        <img src="assets/icons/Cultivo.jpg">
                         <div class="box-content">
-                            <h3 class="title">Kristiana</h3>
-                            <span class="post">Web Designer</span>
+                            <h3 class="title">Cultivo</h3>
+                            <span class="post">Opciones</span>
                             <ul class="social">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a data-toggle="tooltip" data-placement="bottom" title="Cultivos" href="consultar_cultivo.php"><i class="fab fa-pagelines"></i></a></li>
+                                <li><a data-toggle="tooltip" data-placement="bottom" title="Secciones de Cultivo" href="consultar_seccion_de_cultivo.php"><i class="fas fa-puzzle-piece"></i></a></li>
+                                <li><a data-toggle="tooltip" data-placement="bottom" title="Muestras de Cultivo" href="#"><i class="fas fa-file-signature"></i></a></li>
+                                <li><a data-toggle="tooltip" data-placement="bottom" title="Graficar Muestras" href="Google_Charts_Farmlands/vista/Graficar_Muestras.php"><i class="far fa-chart-bar"></i></a></li>
+                                <li><a data-toggle="tooltip" data-placement="bottom" title="Acerca de esta opcion" href="#"><i class="fas fa-info"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -156,9 +109,64 @@
         </div>
           <!------------------ Efecto Hover 16 --------------->
 </div>
- <a href="cerrar.php"> <button class="btn btn-primary" type="submit" style="margin-top: 15px; margin-right: 6px;" ><i class="fas fa-long-arrow-alt-left"></i>  Cerrar Sesión</button></a>
- <a href="Google_Charts_Farmlands/vista/newEmptyPHP.php"> <button class="btn btn-primary" type="submit" style="margin-top: 15px; margin-right: 6px;" ><i class="fas fa-long-arrow-alt-left"></i>  graficas </button></a>
-</div>
+<!-- Footer -->
+	<section id="footer">
+		<div class="container" style="padding: 0">
+			<div class="row text-center text-xs-center text-sm-left text-md-left">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>Quick links</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>Quick links</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>Quick links</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+						<li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+					<ul class="list-unstyled list-inline social text-center">
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+					</ul>
+				</div>
+				</hr>
+			</div>	
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+					<p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
+					<p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
+				</div>
+				</hr>
+			</div>	
+		</div>
+	</section>
+	<!-- ./Footer -->
+
 
 
 

@@ -103,7 +103,8 @@
     width: 40px;
     height: 40px;
     line-height: 40px;
-    background: #6d3795;
+    /*background: #6d3795;*/
+    background: #118b0dd0;
     margin-right: 10px;
     transition: all .3s ease 0s
 }
@@ -125,4 +126,7 @@
     .box16 {
         margin-bottom: 30px
     }
+}
+.navbar-toggler:focus{
+    outline: 0px;
 }

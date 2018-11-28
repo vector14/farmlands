@@ -12,50 +12,14 @@ $con->close();
 ?>
 <html>
     <head>
-    <link rel="stylesheet" href="bootstrap.css">	
-    <nav class="navbar navbar-expand-lg navbar-success bg-success">
-        <a class="navbar-brand" href="#"> <img src="pl.png" width="30" height="30" class="d-inline-block align-top" alt="">tabla de temperatura</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span   class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="../../menu_principal.php">Inicio <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Proyectos
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">software</a>
-                <a class="dropdown-item" href="#">Hadware</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">mas información</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="#">Contacto</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Escribe que buscas" aria-label="Search">
-      <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
-    </form>
-        </div>
-      </nav>
         <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
-  
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>      
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>   
         <script src="js/menu.js" type="text/javascript"></script>
         <script type="text/javascript" src="js/loader.js"></script>
         <script type="text/javascript">
             google.charts.load('current', {'packages': ['corechart']});
             google.charts.setOnLoadCallback(drawVisualization);
-
             function drawVisualization() {
                 // Some raw data (not necessarily accurate)
                 var data = google.visualization.arrayToDataTable([
@@ -66,7 +30,6 @@ while ($fila = $res->fetch_assoc()) {
     echo "[" . $fila["id_muestra"] . ", " . $fila["temperatura_a"] . ", " . $fila["temperatura_m"] . " ],";
 }
 ?>
-
                     //         ['Fecha', 'PH(Acidez)', 'Temperatura(C°)', 'Humedad', 'Presion Atmosferica(hPa)', 'Promedio'],
                     //         ['2004/05',  165,        938,               522,       998,                        614.6],
                     //         ['2005/06',  135,        1120,              599,       1268,                       682],
@@ -74,7 +37,6 @@ while ($fila = $res->fetch_assoc()) {
                     //         ['2007/08',  139,        1110,              615,       968,                        609.4],
                     //         ['2008/09',  136,        691,               629,       1026,                       569.6]
                 ]);
-
                 var options = {
                     title: 'Temperaturas registradas en las muestras de cultivo',
                     vAxis: {title: 'Temperatura en grados Celsius (C°)',
@@ -88,7 +50,6 @@ while ($fila = $res->fetch_assoc()) {
                     seriesType: 'bars',
                     series: {1: {type: 'line'}}
                 };
-
                 var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
                 function selectHandler() {
                     var selectedItem = chart.getSelection()[0];
@@ -98,32 +59,45 @@ while ($fila = $res->fetch_assoc()) {
                         document.getElementById("codigomuestra").value = code;
                     }
                 }
-
                 google.visualization.events.addListener(chart, 'select', selectHandler);
                 chart.draw(data, options);
             }
 //            function button(){
 //                alert(document.getElementById("codigomuestra").value);
 //            }
-
         </script>
-    </head>
-    <body>
-        <style>
-            input[type="color"]{
-                padding: 0;
-                border: 0;
-            }
-        </style>
+    <nav class="navbar navbar-expand-lg navbar-success bg-green">
+        <a class="navbar-brand" href="#" style="color:white"> <img src="pl.png" width="30" height="30" class="d-inline-block align-top" alt="">Tabla de presion Atmosferica</a>
+        <a class="navbar-brand right" href="Graficar_Muestras.php">Volver al inicio</a>
+    </nav>
+    
+ 
+</head>
+<body>
+    <style>
+        input[type="color"]{
+            padding: 0;
+            border: 0;
+        }
+        .navbar a img{
+            display: inline;
+            
+        }
+        .navbar .right{
+            float: right;
+            color: white
+        }
+        .bg-green{
+            background-color: #19c43e;
+        }
+    </style>
         <h5 class="card-title"  style="text:alin-center ">Grafico de temperaturas de las ultimas <?php echo $limite ?> muestras</h5>
         <h6 class="card-subtitle mb-2 text-muted">Para ver los detalles de la muestra tomada, de click en uno de los elementos del grafico y luego en el boton: "Consultar Muestra Seleccionada"</h6>
         <div id="chart_div" style="width: 50%; height: 70%; margin:0 auto ">
         
         </div>
     <hidden id="codigomuestra"></hidden>
-
     <button class="btn btn-primary" style="width: 20%; height: 7%; margin:0 0 0 40% " id="btnConsultar">Consultar Muestra Seleccionada</button>
-
     <div id="consultaMuestra" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -133,17 +107,13 @@ while ($fila = $res->fetch_assoc()) {
                         <h4 class="modal-title">Detalles de la muestra seleccionada</h4>
                     </div>
                     <div class="modal-body">
-
                     </div>
                     <div class="modal-footer">
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
     <script src="js/gestionargraficas.js" type="text/javascript"></script>
 </body>
 </html>
