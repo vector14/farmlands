@@ -10,12 +10,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- Bootstrap CSS -->
   
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="bootstrap.css">	
+    <link rel="stylesheet" href="bootstrap.css">
+  	<link rel="stylesheet" href="css2/menu_principal.css">
 
     <title>Menu Principal</title>
   </head>
@@ -104,7 +104,57 @@
   
   </div>
 <div>
-
+        <!------------------ Efecto Hover 16 --------------->
+       <div class="container mt-40">
+            <h3 class="text-center">Prueba menu v2.0</h3>
+            <div class="row mt-30">
+                <div class="col-md-4 col-sm-6">
+                    <div class="box16">
+                        <img src="assets/icons/Administrador.png">
+                        <div class="box-content">
+                            <h3 class="title">Administrador</h3>
+                            <span class="post">Opciones</span>
+                            <ul class="social">
+                                <li><a data-toggle="tooltip" data-placement="bottom" title="Administrador" href="consultar_administrador.php"><i class="fas fa-users-cog"></i></a></li>
+                                <li><a data-toggle="tooltip" data-placement="bottom" title="Biologo" href="consultar_biologo.php"><i class="fas fa-atom"></i></i></a></li>
+                                <li><a data-toggle="tooltip" data-placement="bottom" title="Granjero" href="consultar_granjero.php" href="#"><i class="fas fa-child"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="box16">
+                        <img src="http://bestjquery.com/tutorial/hover-effect/demo118/images/img-2.jpg">
+                        <div class="box-content">
+                            <h3 class="title">Kristiana</h3>
+                            <span class="post">Web Designer</span>
+                            <ul class="social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="box16">
+                        <img src="http://bestjquery.com/tutorial/hover-effect/demo118/images/img-3.jpg">
+                        <div class="box-content">
+                            <h3 class="title">Kristiana</h3>
+                            <span class="post">Web Designer</span>
+                            <ul class="social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <!------------------ Efecto Hover 16 --------------->
 </div>
  <a href="cerrar.php"> <button class="btn btn-primary" type="submit" style="margin-top: 15px; margin-right: 6px;" ><i class="fas fa-long-arrow-alt-left"></i>  Cerrar Sesión</button></a>
  <a href="Google_Charts_Farmlands/vista/newEmptyPHP.php"> <button class="btn btn-primary" type="submit" style="margin-top: 15px; margin-right: 6px;" ><i class="fas fa-long-arrow-alt-left"></i>  graficas </button></a>
@@ -117,6 +167,11 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+  </script>
   </body>
 </html>
 <?php

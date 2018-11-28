@@ -1,5 +1,9 @@
 <?php
-$con = new mysqli("den1.mysql5.gear.host", "farmlands", "Yz13I5?7kq!8", "farmlands");
+        $localhost="den1.mysql5.gear.host";
+        $usuario="farmlandsdb";
+        $contraseña="Un7pr!E9U~90";
+        $basededatos="farmlandsdb";
+$con = new mysqli("$localhost", "$usuario", "$contraseña", "$basededatos");
 //$sql = "SELECT fecha_muestra, ph, temperatura_m, humedad, presion_atmosferica FROM muestra_prueba";
 $sql = "SELECT id_muestra, temperatura_a, temperatura_m FROM muestra_prueba order by id_muestra desc LIMIT 5";
 $res = $con->query($sql);
