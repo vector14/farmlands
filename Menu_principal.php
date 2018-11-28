@@ -22,7 +22,7 @@
   <body>
 
    <nav class="navbar navbar-expand-lg navbar-success bg-success">
-        <a class="navbar-brand" href="#"> <img src="pl.png" width="30" height="30" class="d-inline-block align-top" alt="">Gestiòn Administrador</a>
+        <a class="navbar-brand" href="#"> <img src="pl.png" width="30" height="30" class="d-inline-block align-top" alt="">Menu Principal: Administrador</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span   class="navbar-toggler-icon"></span>
         </button>
