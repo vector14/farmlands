@@ -59,13 +59,14 @@
     <tr>
       
       <th scope="col">ID MUESTRA</th>
-      <th scope="col">DESCRIPCION</th>
-      <th scope="col">FECHA DE MUESTRA</th>
-      <th scope="col">SECCION DE CULTIVO</th>
       <th scope="col">PH</th>
-      <th scope="col">EXCAVACION</th>
-      <th scope="col">TEMPERATURA</th>
+      <th scope="col">TEMPERATURA_AMBIENTE</th>
+      <th scope="col">TEMPERATURA_MEDIO</th>
       <th scope="col">HUMEDAD</th>
+      <th scope="col">PRESION_ATMOSFERICA</th>
+      <th scope="col">FECHA_MUESTRA</th>
+      <th scope="col">COLOR_HOJA</th>
+      <th scope="col">SECCION_CULTIVO</th>
       </tr>
   </thead>
   <tbody>
@@ -73,11 +74,11 @@
 		include("conexion.php");
     $mysqli=conectar();
      if ($rol=='administrador'){
-       $consulta= "SELECT * FROM  muestra";
+       $consulta= "SELECT * FROM  muestra_prueba";
     }
   else if ($rol=='granjero'){
       
-        $consulta= "SELECT * FROM  muestra where GRANJERO='$DOCUMENTO'";
+        $consulta= "SELECT * FROM  muestra_prueba where GRANJERO='$DOCUMENTO'";
     }
 			
 			if ($resultado = $mysqli->query($consulta)) 
@@ -85,10 +86,10 @@
 				while ($fila = $resultado->fetch_row()) 
 				{					
 					echo "<tr>";
-					echo "<td>$fila[0]</td><td>$fila[1]</td><td>$fila[2]</td><td>$fila[3]</td><td>$fila[4]</td><td>$fila[5]</td><td>$fila[6]</td><td>$fila[7]</td>";	
+					echo "<td>$fila[0]</td><td>$fila[1]</td><td>$fila[2]</td><td>$fila[3]</td><td>$fila[4]</td><td>$fila[5]</td><td>$fila[6]</td><td>$fila[7]</td><td>$fila[8]</td>";	
 					echo"<td>";						
-				    echo "<a  data-toggle='modal' data-target='#editUsu' data-ID_MUESTRA='" .$fila[0] ."' data-descripcion='" .$fila[1] ."' data-fecha_muestra='" .$fila[2] ."' data-seccion_cultivo='" .$fila[3]."' data-ph='".$fila[4]."' data-excavacion='".$fila[5]."' data-temperatura='".$fila[6]."' data-humedad='".$fila[7]."' class='btn btn-warning'><span class='glyphicon glyphicon-pencil'></span>Editar</a> ";			
-					echo "<a class='btn btn-danger' href='eliminar_muestra.php?ID_MUESTRA=" .$fila[0] ."'><span class='glyphicon glyphicon-remove'></span>Eliminar</a>";		
+				    echo "<a  data-toggle='modal' data-target='#editUsu' data-ID_MUESTRA='" .$fila[0] ."' data-ph='" .$fila[1] ."' data-muestra_a='" .$fila[2] ."' data-muestra_m='" .$fila[3]."' data-humedad='".$fila[4]."' data-presion_atmosferica='".$fila[5]."' data-fecha_muestra='".$fila[6]."' data-color_hoja='".$fila[7]."' data-seccion_cultivo='".$fila[8]."' class='btn btn-warning'><span class='glyphicon glyphicon-pencil'></span>Editar</a> ";			
+					echo "<a class='btn btn-danger' href='eliminar_muestra - pruebas.php?ID_MUESTRA=" .$fila[0] ."'><span class='glyphicon glyphicon-remove'></span>Eliminar</a>";		
 					echo "</td>";
 					echo "</tr>";
 				}
@@ -134,18 +135,36 @@
                         <h4><img src="pl.png" width="30" height="30" class="d-inline-block align-top" alt="">Nueva muestra</h4>                       
                     </div>
                     <div class="modal-body">
-                       <form action="crear_muestra.php" method="GET">                 
+                       <form action="crear_muestra - pruebas.php" method="GET">                 
                           <div class="form-group">
-                            <label for="DOCUMENTO">DESCRIPCION:</label>
-                            <input class="form-control" id="DESCRIPCION" name="DESCRIPCION" type="text" placeholder="DESCRIPCION" required pattern="[A-Za-z]{2,300}"
-         title="Digite solo letras"/>
+                            <label for="PH">PH:</label>
+                            <input class="form-control" id="PH" name="PH" type="text" placeholder="PH" required pattern="[0-9.]{1,25}"
+         title="Digite solo numeros"/>
                           </div>
                           <div class="form-group">
-                            <label for="NOMBRE">FECHA DE LA MUESTRA:</label>
+                            <label for="TEMPERATURA_A">TEMPERATURA AMBIENTE:</label>
+                            <input class="form-control" id="TEMPERATURA_A" name="TEMPERATURA_A" type="NUMBER" placeholder="TEMPERATURA AMBIENTE"/>
+                          </div>
+                          <div class="form-group">
+                             <label for="TEMPERATURA_M">TEMPERATURA DEL MEDIO:</label>
+                            <input class="form-control" id="TEMPERATURA_M" name="TEMPERATURA_M" type="NUMBER" placeholder="TEMPERATURA DEL MEDIO"/>
+                          </div>
+                            <label for="HUMEDAD">HUMEDAD:</label>
+                            <input class="form-control" id="HUMEDAD" name="HUMEDAD" type="NUMBER" placeholder="HUMEDAD"/>
+                          </div>
+                          <div class="form-group">
+                            <label for="PRESION_ATMOSFERICA">PRESION ATMOSFERICA:</label>
+                            <input class="form-control" id="PRESION_ATMOSFERICA" name="PRESION_ATMOSFERICA" type="NUMBER" placeholder="PRESION ATMOSFERICA"/>
+                          </div>
+                          <div class="form-group">
+                            <label for="FECHA_MUESTRA">FECHA DE LA MUESTRA:</label>
                             <input class="form-control" id="FECHA_MUESTRA" name="FECHA_MUESTRA" type="date" placeholder="FECHA_MUESTRA"/>
+                          </div><div class="form-group">
+                            <label for="COLOR_HOJA">COLOR DE LA HOJA:</label>
+                            <input class="form-control" id="COLOR_HOJA" name="COLOR_HOJA" type="color"/>
                           </div>
-                          <div class="form-group">
-                            <label for="SECCION_CULTIVO">SECCION DEL CULTIVO:</label>
+                         <div class="form-group">
+                        <label for="SECCION_CULTIVO">SECCION DEL CULTIVO:</label>
                              <select class="form-control" name="SECCION_CULTIVO" id="SECCION_CULTIVO"  "> 
 <?php
         $mysqli=conectar();
@@ -166,20 +185,6 @@
                            </div>
                          
                            <div class="form-group">
-                            <label for="PH">PH:</label>
-                            <input class="form-control" id="PH" name="PH" type="text" placeholder="PH"/>
-                          </div>
-                          <div class="form-group">
-                            <label for="EXCAVACION">EXCAVACION:</label>
-                            <input class="form-control" id="EXCAVACION" name="EXCAVACION" type="text" placeholder="EXCAVACION"/>
-                          </div>
-                          <div class="form-group">
-                            <label for="TEMPERATURA">TEMPERATURA:</label>
-                            <input class="form-control" id="TEMPERATURA" name="TEMPERATURA" type="number" placeholder="TEMPERATURA"/>
-                          </div><div class="form-group">
-                            <label for="HUMEDAD">HUMEDAD:</label>
-                            <input class="form-control" id="HUMEDAD" name="HUMEDAD" type="text" placeholder="HUMEDAD"/>
-                          </div>
               <input type="submit" class="btn btn-success" value="registar">
               <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>
               </form>
@@ -200,42 +205,52 @@
                         <h4><img src="pl.png" width="30" height="30" class="d-inline-block align-top" alt="">Editar Muestra</h4>
                     </div>
                     <div class="modal-body">                      
-                       <form action="actualizar_muestra.php" method="POST">                       		
-                       		        
-                       <div class="form-group">
-                       			<label for="DOCUMENTO">ID MUESTRA:</label>
-                       			<input class="form-control" id="id_muestra" name="id_muestra" type="text"/></input>
-                       		</div>
-                       		<div class="form-group">
-                       			<label for="NOMBRE">DESCRIPCION:</label>
-                       			<input class="form-control" id="descripcion" name="descripcion" type="text" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras" /></input>
-                       		</div>
-                       		<div class="form-group">
-                       			<label for="APELLIDO">FECHA MUESTRA:</label>
-                       			<input class="form-control" id="fecha_muestra" name="fecha_muestra" type="date" /></input>
+                       <form action="actualizar_muestra - pruebas.php" method="POST">                       		
+                                               <label for="PH">PH:</label>
+                            <input class="form-control" id="PH" name="PH" type="NUMBER" placeholder="PH"/>
+                          </div>
+                          <div class="form-group">
+                            <label for="TEMPERATURA_A">TEMPERATURA AMBIENTE:</label>
+                            <input class="form-control" id="TEMPERATURA_A" name="TEMPERATURA_A" type="NUMBER" placeholder="TEMPERATURA AMBIENTE"/>
+                          </div>
+                          <div class="form-group">
+                             <label for="TEMPERATURA_M">TEMPERATURA DEL MEDIO:</label>
+                            <input class="form-control" id="TEMPERATURA_M" name="TEMPERATURA_M" type="NUMBER" placeholder="TEMPERATURA DEL MEDIO"/>
+                          </div>
+                            <label for="HUMEDAD">HUMEDAD:</label>
+                            <input class="form-control" id="HUMEDAD" name="HUMEDAD" type="NUMBER" placeholder="HUMEDAD"/>
+                          </div>
+                          <div class="form-group">
+                            <label for="PRESION_ATMOSFERICA">PRESION ATMOSFERICA:</label>
+                            <input class="form-control" id="PRESION_ATMOSFERICA" name="PRESION_ATMOSFERICA" type="NUMBER" placeholder="PRESION ATMOSFERICA"/>
+                          </div>
+                          <div class="form-group">
+                            <label for="FECHA_MUESTRA">FECHA DE LA MUESTRA:</label>
+                            <input class="form-control" id="FECHA_MUESTRA" name="FECHA_MUESTRA" type="date" placeholder="FECHA_MUESTRA"/>
+                          </div><div class="form-group">
+                            <label for="COLOR_HOJA">COLOR DE LA HOJA:</label>
+                            <input class="form-control" id="COLOR_HOJA" name="COLOR_HOJA" type="color" placeholder="COLOR DE LA HOJA"/>
+                          </div>
+                         <div class="form-group">
+                        <label for="SECCION_CULTIVO">SECCION DEL CULTIVO:</label>
+                             <select class="form-control" name="SECCION_CULTIVO" id="SECCION_CULTIVO"  "> 
+<?php
+        $mysqli=conectar();
+      $consulta= "SELECT * FROM  seccion_de_cultivo";
+      if ($resultado = $mysqli->query($consulta)) 
+      {
+        while ($fila = $resultado->fetch_row()) 
+        {         
+          echo "<option value=$fila[0]  >    $fila[2]  </option>";
+ 
+        }
+        $resultado->close();
+      }
+      $mysqli->close();     
+
+?>
+     </select>
                            </div>
-                           <div class="form-group">
-                       			<label for="CIUDAD">SECCION CULTIVO:</label>
-                       		<input class="form-control" id="seccion_cultivo" name="seccion_cultivo" type="text" /></input>
-                           </div>
-                           <div class="form-group">
-                       			<label for="CORREO">PH:</label>
-                       			<input class="form-control" id="ph" name="ph" type="text" required pattern="[0-9.]"
-         title="Digite solo letras"/></input>
-                           </div>
-                           <div class="form-group">
-                       			<label for="TELEFONO">EXCAVACION:</label>
-                       			<input class="form-control" id="excavacion" name="excavacion" type="text"/>
-                       		</div>
-                           <div class="form-group">
-                       			<label for="TELEFONO">TEMPERATURA:</label>
-                       			<input class="form-control" id="temperatura" name="temperatura" type="text"/>
-                       		</div>
-                           <div class="form-group">
-                       			<label for="TELEFONO">HUMEDAD:</label>
-                       			<input class="form-control" id="humedad" name="humedad" type="text"/>
-                       		</div>
                         
 
                   <input type="submit" class="btn btn-success">		
@@ -256,13 +271,14 @@
 		  $('#editUsu').on('show.bs.modal', function (event) {
 		  var button = $(event.relatedTarget) // Button that triggered the modal
 		  var recipient1 = button.data('id_muestra')
-		  var recipient2 = button.data('descripcion')
-		  var recipient3 = button.data('fecha_muestra')
-      var recipient5 = button.data('seccion_cultivo')
-      var recipient6 = button.data('ph')
-      var recipient7 = button.data('excavacion')
-      var recipient8 = button.data('temperatura')
-      var recipient9 = button.data('humedad')
+		  var recipient2 = button.data('ph')
+		  var recipient3 = button.data('temperatura_a')
+      var recipient5 = button.data('temmperatura_m')
+      var recipient6 = button.data('humedad')
+      var recipient7 = button.data('presion_atmosferica')
+      var recipient8 = button.data('fecha_muestra')
+      var recipient9 = button.data('color_hoja')
+      var recipient10 = button.data('seccion_cultivo')
 
 		   // Extract info from data-* attributes
 		  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
@@ -270,13 +286,14 @@
 		 
 		  var modal = $(this)		 
 		  modal.find('.modal-body #id_muestra').val(recipient1)
-		  modal.find('.modal-body #descripcion').val(recipient2)
-		  modal.find('.modal-body #fecha_muestra').val(recipient3)
-      modal.find('.modal-body #seccion_cultivo').val(recipient5)
-      modal.find('.modal-body #ph').val(recipient6)
-      modal.find('.modal-body #excavacion').val(recipient7)
-      modal.find('.modal-body #temperatura').val(recipient8)
-      modal.find('.modal-body #humedad').val(recipient9)
+		  modal.find('.modal-body #ph').val(recipient2)
+		  modal.find('.modal-body #temperatura_a').val(recipient3)
+      modal.find('.modal-body #temmperatura_m').val(recipient5)
+      modal.find('.modal-body #humedad').val(recipient6)
+      modal.find('.modal-body #presion_atmosferica').val(recipient7)
+      modal.find('.modal-body #fecha_muestra').val(recipient8)
+      modal.find('.modal-body #color_hoja').val(recipient9)
+      modal.find('.modal-body #seccion_cultivo').val(recipient10)
       
    		 
    		 

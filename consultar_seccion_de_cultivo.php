@@ -1,4 +1,11 @@
-<!doctype html>
+<?php
+	session_start();
+	if(isset($_SESSION['resultado']))
+	{
+        $cadena= $_SESSION ['resultado'];
+       $rol= $cadena[3];
+       $DOCUMENTO= $cadena[4];
+?><!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -88,7 +95,21 @@
 <tr>
   
   <th scope="col"><button  data-toggle="modal" data-target="#nuevoUsu" class="btn btn-success" type="submit">nueva sección</button></th>
+  <?php
+  if ($rol=='administrador'){
+     
+    ?>
   <th scope="col"> <a href="Menu_principal.php"><button class="btn btn-success" type="submit">Atras</button></a></th>
+   <?php
+  }
+  else if ($rol=='granjero'){
+      
+   ?>
+   <th scope="col"> <a href="Menu_granjero.php"><button class="btn btn-success" type="submit">Atras</button></a></th>
+  
+    <?php
+ }
+     ?>
  
 </tr>
 
@@ -112,7 +133,8 @@
                           </div>
                           <div class="form-group">
                             <label for="APELLIDO">UBICACION:</label>
-                            <input class="form-control" id="UBICACION" name="UBICACION" type="text" placeholder="UBICACION"/>
+                            <input class="form-control" id="UBICACION" name="UBICACION" type="text" placeholder="UBICACION" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras"/>
                            </div>
                            <div class="form-group">
                             <label for="DIRECCION">ID_CULTIVO:</label>
@@ -161,11 +183,12 @@
                        		</div>
                        		<div class="form-group">
                        			<label for="NOMBRE">DIMENCIONES:</label>
-                       			<input class="form-control" id="dimensiones" name="dimensiones" type="text" /></input>
+                       			<input class="form-control" id="dimensiones" name="dimensiones" type="number" /></input>
                        		</div>
                        		<div class="form-group">
                        			<label for="APELLIDO">UBICACION:</label>
-                       			<input class="form-control" id="ubicacion" name="ubicacion" type="text" /></input>
+                       			<input class="form-control" id="ubicacion" name="ubicacion" type="text" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras" /></input>
                            </div>
                            <div class="form-group">
                        			<label for="CIUDAD">ID CULTIVO:</label>
@@ -217,4 +240,12 @@
   </body>
 </html>
 
-
+<?php
+	}
+	else
+	{
+		?>
+		 <META HTTP-EQUIV="Refresh" CONTENT="0; URL=index.php">
+		 <?php
+	}
+?>

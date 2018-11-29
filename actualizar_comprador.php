@@ -15,6 +15,6 @@ $mysqli=conectar();
 	?>	
 
 		    <SCRIPT LANGUAGE="javascript"> 
-            alert(" el comprador fue ATUALIZADO"); 
+            alert(" el comprador fue ACTUALIZADO"); 
             </SCRIPT> 
             <META HTTP-EQUIV="Refresh" CONTENT="0; URL=consultar_comprador.php">

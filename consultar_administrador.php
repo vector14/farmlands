@@ -119,41 +119,35 @@ $mysqli=conectar();
                        		
                            <div class="form-group">
                             <label for="CIUDAD">DOCUMENTO:</label>
-                            <select class="form-control" name="DOCUMENTO" id="DOCUMENTO"  > 
-<?php
- 
- $mysqli=conectar();
-      $consulta= "SELECT * FROM usuario";
-      if ($resultado = $mysqli->query($consulta)) 
-      {
-        while ($fila = $resultado->fetch_row()) 
-        {         
-          echo "<option value=$fila[4]  >    $fila[1]  </option>";
- 
-        }
-        $resultado->close();
-      }
-      $mysqli->close();     
-
-?>
-     </select>
+                  	<input class="form-control" id="DOCUMENTO" name="DOCUMENTO" type="number" placeholder="DOCUMENTO"/>
                           </div>
                        		<div class="form-group">
                        			<label for="NOMBRE">NOMBRE:</label>
-                       			<input class="form-control" id="NOMBRE" name="NOMBRE" type="text" placeholder="NOMBRE"/>
+                       			<input class="form-control" id="NOMBRE" name="NOMBRE" type="text" placeholder="NOMBRE" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras"/>
                        		</div>
                        		<div class="form-group">
                        			<label for="APELLIDO">APELLIDO:</label>
-                       			<input class="form-control" id="APELLIDO" name="APELLIDO" type="text" placeholder="APELLIDO"/>
+                       			<input class="form-control" id="APELLIDO" name="APELLIDO" type="text" placeholder="APELLIDO" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras"/>
                            </div>
                            <div class="form-group">
                        			<label for="CIUDAD">CIUDAD:</label>
-                       			<input class="form-control" id="CIUDAD" name="CIUDAD" type="text" placeholder="CIUDAD"/>
+                       			<input class="form-control" id="CIUDAD" name="CIUDAD" type="text" placeholder="CIUDAD" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras"/>
                            </div>
                            <div class="form-group">
                        			<label for="CORREO">CORREO:</label>
                        			<input class="form-control" id="CORREO" name="CORREO" type="email" placeholder="CORREO"/>
                            </div>
+                           <div class="form-group">
+                       			<label for="USUARIO">USUARIO:</label>
+                       			<input class="form-control" id="USUARIO" name="USUARIO" type="text" placeholder="USUARIO"/>
+                       		</div>
+                           <div class="form-group">
+                       			<label for="CLAVE">CONTRASEÑA:</label>
+                       			<input class="form-control" id="CLAVE" name="CLAVE" type="text" placeholder="CLAVE"/>
+                       		</div>
                            <div class="form-group">
                        			<label for="NOMBRE">TELEFONO:</label>
                        			<input class="form-control" id="TELEFONO" name="TELEFONO" type="number" placeholder="TELEFONO"/>
@@ -180,19 +174,22 @@ $mysqli=conectar();
                        		        
                        <div class="form-group">
                        			<label for="DOCUMENTO">DOCUMENTO:</label>
-                       			<input class="form-control" id="documento" name="documento" type="text"/></input>
+                       			<input class="form-control" id="documento" name="documento" type="number"/></input>
                        		</div>
                        		<div class="form-group">
                        			<label for="NOMBRE">NOMBRE:</label>
-                       			<input class="form-control" id="nombre" name="nombre" type="text" /></input>
+                       			<input class="form-control" id="nombre" name="nombre" type="text" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras" /></input>
                        		</div>
                        		<div class="form-group">
                        			<label for="APELLIDO">APELLIDO:</label>
-                       			<input class="form-control" id="apellido" name="apellido" type="text" /></input>
+                       			<input class="form-control" id="apellido" name="apellido" type="text" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras"/></input>
                            </div>
                            <div class="form-group">
                        			<label for="CIUDAD">CIUDAD:</label>
-                       			<input class="form-control" id="ciudad" name="ciudad" type="text" /></input>
+                       			<input class="form-control" id="ciudad" name="ciudad" type="text" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras" /></input>
                            </div>
                            <div class="form-group">
                        			<label for="CORREO">CORREO:</label>
@@ -200,7 +197,7 @@ $mysqli=conectar();
                            </div>
                            <div class="form-group">
                        			<label for="TELEFONO">TELEFONO:</label>
-                       			<input class="form-control" id="telefono" name="telefono" type="text"/>
+                       			<input class="form-control" id="telefono" name="telefono" type="number"/>
                        		</div>
 
                   <input type="submit" class="btn btn-success">		

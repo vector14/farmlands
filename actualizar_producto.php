@@ -14,6 +14,6 @@
 	?>	
 
 		    <SCRIPT LANGUAGE="javascript"> 
-            alert(" el producto fue ATUALIZADO"); 
+            alert(" el producto fue ACTUALIZADO"); 
             </SCRIPT> 
             <META HTTP-EQUIV="Refresh" CONTENT="0; URL=consultar_producto.php">

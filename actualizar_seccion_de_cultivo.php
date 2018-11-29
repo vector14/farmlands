@@ -13,6 +13,6 @@
 	?>	
 
 		    <SCRIPT LANGUAGE="javascript"> 
-            alert(" la seccion de  cultivo fue ATUALIZADA"); 
+            alert(" la seccion de  cultivo fue ACTUALIZADA"); 
             </SCRIPT> 
             <META HTTP-EQUIV="Refresh" CONTENT="0; URL=consultar_seccion_de_cultivo.php">

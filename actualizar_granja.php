@@ -15,6 +15,6 @@
 	?>	
 
 		    <SCRIPT LANGUAGE="javascript"> 
-            alert(" la granja fue ATUALIZADA"); 
+            alert(" la granja fue ACTUALIZADA"); 
             </SCRIPT> 
             <META HTTP-EQUIV="Refresh" CONTENT="0; URL=consultar_granja.php">

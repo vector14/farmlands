@@ -17,6 +17,6 @@
 	?>	
 
 		    <SCRIPT LANGUAGE="javascript"> 
-            alert(" la muestra fue ATUALIZADA"); 
+            alert(" la muestra fue ACTUALIZADA"); 
             </SCRIPT> 
             <META HTTP-EQUIV="Refresh" CONTENT="0; URL=consultar_muestra.php">

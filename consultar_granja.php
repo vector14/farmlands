@@ -1,4 +1,11 @@
-<!doctype html>
+<?php
+	session_start();
+	if(isset($_SESSION['resultado']))
+	{
+        $cadena= $_SESSION ['resultado'];
+       $rol= $cadena[3];
+       $DOCUMENTO= $cadena[4];
+?><!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -13,7 +20,7 @@
   <body>
 
      <nav class="navbar navbar-expand-lg navbar-success bg-success">
-        <a class="navbar-brand" href="#"> <img src="pl.png" width="30" height="30" class="d-inline-block align-top" alt="">Gestiòn Administrador</a>
+        <a class="navbar-brand" href="#"> <img src="pl.png" width="30" height="30" class="d-inline-block align-top" alt="">Gestión Granja</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span   class="navbar-toggler-icon"></span>
         </button>
@@ -64,7 +71,14 @@
   <?php
 		include("conexion.php");
     $mysqli=conectar();
-			$consulta= "SELECT * FROM  granja";
+    if ($rol=='administrador'){
+        $consulta= "SELECT * FROM  granja";
+    }
+  else if ($rol=='granjero'){
+      
+        $consulta= "SELECT * FROM  granja where GRANJERO='$DOCUMENTO'";
+    }
+			
 			if ($resultado = $mysqli->query($consulta)) 
 			{
 				while ($fila = $resultado->fetch_row()) 
@@ -91,9 +105,22 @@
 
 <tr>
   
-  <th scope="col"><button  data-toggle="modal" data-target="#nuevoUsu" class="btn btn-success" type="submit">nuevo Administrador</button></th>
+  <th scope="col"><button  data-toggle="modal" data-target="#nuevoUsu" class="btn btn-success" type="submit">Nueva Granja</button></th>
+  <?php
+  if ($rol=='administrador'){
+     
+    ?>
   <th scope="col"> <a href="Menu_principal.php"><button class="btn btn-success" type="submit">Atras</button></a></th>
- 
+   <?php
+  }
+  else if ($rol=='granjero'){
+      
+   ?>
+   <th scope="col"> <a href="Menu_granjero.php"><button class="btn btn-success" type="submit">Atras</button></a></th>
+  
+    <?php
+ }
+     ?>
 </tr>
 
 </table>
@@ -108,7 +135,8 @@
                        <form action="crear_granja.php" method="GET">                 
                           <div class="form-group">
                             <label for="NOMBRE">NOMBRE:</label>
-                            <input class="form-control" id="NOMBRE" name="NOMBRE" type="text" placeholder="NOMBRE"/>
+                            <input class="form-control" id="NOMBRE" name="NOMBRE" type="text" placeholder="NOMBRE" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras"/>
                           </div>
                           <div class="form-group">
                             <label for="APELLIDO">TERRENO:</label>
@@ -124,8 +152,12 @@
                            </div>
                            <div class="form-group">
                             <label for="EDAD">PRODUCTO ESPECIALIZADO:</label>
-                            <input class="form-control" id="PRODUCTO_ESPECIALIZADO" name="PRODUCTO_ESPECIALIZADO" type="text" placeholder="PRODUCTO_ESPECIALIZADO"/>
+                            <input class="form-control" id="PRODUCTO_ESPECIALIZADO" name="PRODUCTO_ESPECIALIZADO" type="text" placeholder="PRODUCTO_ESPECIALIZADO" />
                           </div>
+                                            <?php
+                           if ($rol=='administrador'){
+                               
+                          ?>
                           <div class="form-group">
                             <label for="GRANJERO">GRANJERO:</label>
                              <select class="form-control"name="GRANJERO" id="GRANJERO" > 
@@ -144,8 +176,16 @@
       $mysqli->close();     
 
 ?>
-     </select>
-                           </div>
+                             </select>
+                            </div>
+        <?php }
+  else if ($rol=='granjero'){
+      
+       
+  
+    ?>
+                           <input  value="<?=$DOCUMENTO ?>" class="form-control" id="GRANJERO" name="GRANJERO" type="hidden"/>
+  <?php }?>               
               <input type="submit" class="btn btn-success" value="registar">
               <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>
               </form>
@@ -170,11 +210,12 @@
                        		</div>
                        		<div class="form-group">
                        			<label for="NOMBRE">NOMBRE:</label>
-                       			<input class="form-control" id="nombre" name="nombre" type="text" /></input>
+                       			<input class="form-control" id="nombre" name="nombre" type="text" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras"/></input>
                        		</div>
                        		<div class="form-group">
                        			<label for="APELLIDO">TERRENO:</label>
-                       			<input class="form-control" id="terreno" name="terreno" type="text" /></input>
+                       			<input class="form-control" id="terreno" name="terreno" type="number" /></input>
                            </div>
                            <div class="form-group">
                        			<label for="CIUDAD">PISO TERMICO:</label>
@@ -182,16 +223,21 @@
                            </div>
                            <div class="form-group">
                        			<label for="CORREO">UBICACION:</label>
-                       			<input class="form-control" id="ubicacion" name="ubicacion" type="text" /></input>
+                       			<input class="form-control" id="ubicacion" name="ubicacion" type="text" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras" /></input>
                            </div>
                            <div class="form-group">
                        			<label for="TELEFONO">PRODUCTO ESPECIALIZADO:</label>
                        			<input class="form-control" id="prodcuto_especializado" name="prodcuto_especializado" type="text"/>
                        		</div>
-                           <div class="form-group">
+                   
+
+                              <div class="form-group">
                        			<label for="TELEFONO">ID GRANJERO:</label>
                        			<input class="form-control" id="id_granjero" name="id_granjero" type="text"/>
                        		</div>
+
+                        
 
                   <input type="submit" class="btn btn-success">	
                   <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>						
@@ -239,3 +285,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>
+<?php
+	}
+	else
+	{
+		?>
+		 <META HTTP-EQUIV="Refresh" CONTENT="0; URL=index.php">
+		 <?php
+	}
+?>

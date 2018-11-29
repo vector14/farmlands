@@ -111,48 +111,76 @@ $mysqli=conectar();
                        <form action="crear_granjero.php" method="GET">                 
                        <div class="form-group">
                             <label for="CIUDAD">DOCUMENTO:</label>
-                            <select class="form-control" name="DOCUMENTO" id="DOCUMENTO"  > 
-<?php
-    $mysqli=conectar();
-      $consulta= "SELECT * FROM usuario";
-      if ($resultado = $mysqli->query($consulta)) 
-      {
-        while ($fila = $resultado->fetch_row()) 
-        {         
-          echo "<option value=$fila[4]  >    $fila[1]  </option>";
- 
-        }
-        $resultado->close();
-      }
-      $mysqli->close();     
-
-?>
-     </select>
+                   <input class="form-control" id="DOCUMENTO" name="DOCUMENTO" type="number" placeholder="DOCUMENTO"/>
                           </div>
                           <div class="form-group">
                             <label for="NOMBRE">NOMBRE:</label>
-                            <input class="form-control" id="NOMBRE" name="NOMBRE" type="text" placeholder="NOMBRE"/>
+                            <input class="form-control" id="NOMBRE" name="NOMBRE" type="text" placeholder="NOMBRE" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras"/>
                           </div>
                           <div class="form-group">
                             <label for="APELLIDO">APELLIDO:</label>
-                            <input class="form-control" id="APELLIDO" name="APELLIDO" type="text" placeholder="APELLIDO"/>
+                            <input class="form-control" id="APELLIDO" name="APELLIDO" type="text" placeholder="APELLIDO" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras"/>
                            </div>
+                            <div class="form-group">
+                       			<label for="USUARIO">USUARIO:</label>
+                       			<input class="form-control" id="USUARIO" name="USUARIO" type="text" placeholder="USUARIO"/>
+                       		</div>
+                           <div class="form-group">
+                       			<label for="CLAVE">CONTRASEÑA:</label>
+                       			<input class="form-control" id="CLAVE" name="CLAVE" type="text" placeholder="CLAVE"/>
+                       		</div>
                            <div class="form-group">
                             <label for="TELEFONO">TIPO DOCUMENTO:</label>
                             <input class="form-control" id="TIPO_DOCUMENTO" name="TIPO_DOCUMENTO" type="text" placeholder="TIPO_DOCUMENTO"/>
                            </div>
-                           <div class="form-group">
-                            <label for="EDAD">MUNICIPIO:</label>
-                            <input class="form-control" id="MUNICIPIO" name="MUNICIPIO" type="text" placeholder="MUNICIPIO"/>
-                          </div>
+         <div class="form-group">
+                                <label for="EDAD">MUNICIPIO:</label>
+                                <select class="form-control" id="MUNICIPIO" name="MUNICIPIO" type="text" placeholder="MUNICIPIO">
+                                    <option value="Bogotá Distrito Capital">Bogotá Distrito Capital</option>
+                                    <option value="Amazonas">Amazonas</option>
+                                    <option value="Antioquia">Antioquia</option>
+                                    <option value="Arauca">Arauca</option>
+                                    <option value="Atlántico">Atlántico</option>
+                                    <option value="Bolívar">Bolívar</option>
+                                    <option value="Boyacá">Boyacá</option>
+                                    <option value="Caldas">Caldas</option>
+                                    <option value="Caquetá">Caquetá</option>
+                                    <option value="Casanare">Casanare</option>
+                                    <option value="Cauca">Cauca</option>
+                                    <option value="Cesar">Cesar</option>
+                                    <option value="Cordoba">Cordoba</option>
+                                    <option value="Cundinamarca">Cundinamarca</option>
+                                    <option value="Chocó">Chocó</option>
+                                    <option value="Guainía">Guainía</option>
+                                    <option value="Guaviare">Guaviare</option>
+                                    <option value="Huila">Huila</option>
+                                    <option value="La Guajira">La Guajira</option>
+                                    <option value="Magdalena">Magdalena</option>
+                                    <option value="Meta">Meta</option>
+                                    <option value="Nariño">Nariño</option>
+                                    <option value="Norte de Santander">Norte de Santander</option>
+                                    <option value="Putumayo">Putumayo</option>
+                                    <option value="Quindio">Risaralda</option>
+                                    <option value="Santander">Santander</option>
+                                    <option value="San Andrés y Providencia">San Andrés y Providencia</option>
+                                    <option value="Sucre">Sucre</option>
+                                    <option value="Tolima">Tolima</option>
+                                    <option value="Valle del Cauca">Valle del Cauca</option>
+                                    <option value="Vaupés">Vaupés</option>
+                                    <option value="Vichada">Vichada</option>
+                                </select>
+                            </div>
                            <div class="form-group">
                             <label for="CIUDAD">DEPARTAMENTO:</label>
-                            <input class="form-control" id="DEPARTAMENTO" name="DEPARTAMENTO" type="text" placeholder="DEPARTAMENTO"/>
-                          </div>
+<input class="form-control" id="DEPARTAMENTO" name="DEPARTAMENTO" type="text" placeholder="DEPARTAMENTO" />
+</div>
                            <div class="form-group">
                             <label for="DIRECCION">EDAD:</label>
-                            <input class="form-control" id="EDAD" name="EDAD" type="number" placeholder="EDAD"/>
+                            <input class="form-control" id="EDAD" name="EDAD" type="number" placeholder="EDAD" />
                            </div>
+
                          
                            <input type="submit" class="btn btn-success" value="registar">
               <button type="button"  class="btn   btn-warning  left " data-dismiss="modal">Cerrar</button>
@@ -177,19 +205,22 @@ $mysqli=conectar();
                        		        
                        <div class="form-group">
                        			<label for="DOCUMENTO">DOCUMENTO:</label>
-                       			<input class="form-control" id="documento" name="documento" type="text"/>
+                       			<input class="form-control" id="documento" name="documento" type="number"/>
                        		</div>
                        		<div class="form-group">
                        			<label for="NOMBRE">NOMBRE:</label>
-                       			<input class="form-control" id="nombre" name="nombre" type="text" />
+                       			<input class="form-control" id="nombre" name="nombre" type="text" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras"/>
                        		</div>
                        		<div class="form-group">
                        			<label for="APELLIDO">APELLIDO:</label>
-                       			<input class="form-control" id="apellido" name="apellido" type="text" />
+                       			<input class="form-control" id="apellido" name="apellido" type="text" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras"/>
                            </div>
                            <div class="form-group">
                        			<label for="CORREO">TIPO DE DOCUMENTO:</label>
-                       			<input class="form-control" id="tipo_documento" name="tipo_documento" type="text" />
+                       			<input class="form-control" id="tipo_documento" name="tipo_documento" type="text" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras"/>
                            </div>
                            <div class="form-group">
                        			<label for="">MUNICIPIO:</Label>
@@ -197,11 +228,12 @@ $mysqli=conectar();
                        		</div>
                            <div class="form-group">
                        			<label for="TELEFONO">DEPARTAMENTO:</label>
-                       			<input class="form-control" id="departamento" name="departamento" type="text"/>
+                       			<input class="form-control" id="departamento" name="departamento" type="text" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras"/>
                        		</div>
                            <div class="form-group">
                        			<label for="TELEFONO">EDAD:</label>
-                       			<input class="form-control" id="edad" name="edad" type="text"/>
+                       			<input class="form-control" id="edad" name="edad" type="number"/>
                        		</div>
 
                   <input type="submit" class="btn btn-success">			
@@ -244,6 +276,6 @@ $mysqli=conectar();
 		});
 		
 	</script>
-   
+
   </body>
 </html>

@@ -15,10 +15,10 @@
       $ID_GRANJA= $_POST['id_granja'];
       $Nivel= $_POST['mar'];									
 			$sql = $mysqli->query("UPDATE cultivo SET TITULO = '$TITULO', ESTADO = '$ESTADO', CLIMA_ACTUAL = '$CLIMA_ACTUAL', AREA_CULTIVO = '$AREA_CULTIVO', FECHA_INICIO = '$FECHA_INICIO', PRODUCTO = '$PRODUCTO', NIVEL_DEL_MAR = '$Nivel' WHERE ID_CULTIVO = '$ID_CULTIVO");			
-			
+                        printf( $sql);		
 	?>	
 
 		    <SCRIPT LANGUAGE="javascript"> 
-            alert(" el cultivo fue ATUALIZADO"); 
+            alert(" el cultivo fue ACTUALIZADO"); 
             </SCRIPT> 
-            <META HTTP-EQUIV="Refresh" CONTENT="0; URL=consultar_cultivo.php">
+

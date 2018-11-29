@@ -1,4 +1,11 @@
-<!doctype html>
+<?php
+	session_start();
+	if(isset($_SESSION['resultado']))
+	{
+        $cadena= $_SESSION ['resultado'];
+       $rol= $cadena[3];
+       $DOCUMENTO= $cadena[4];
+?>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -96,8 +103,21 @@
 <tr>
   
   <th scope="col"><button  data-toggle="modal" data-target="#nuevoUsu" class="btn btn-success" type="submit">Nueva Muestra</button></th>
+    <?php
+  if ($rol=='administrador'){
+     
+    ?>
   <th scope="col"> <a href="Menu_principal.php"><button class="btn btn-success" type="submit">Atras</button></a></th>
- 
+   <?php
+  }
+  else if ($rol=='granjero'){
+      
+   ?>
+   <th scope="col"> <a href="Menu_granjero.php"><button class="btn btn-success" type="submit">Atras</button></a></th>
+  
+    <?php
+ }
+     ?>
 </tr>
 
 </table>
@@ -141,7 +161,8 @@
                              
                           <div class="form-group">
                             <label for="DOCUMENTO">DESCRIPCION:</label>
-                            <input class="form-control" id="DESCRIPCION" name="DESCRIPCION" type="text" placeholder="DESCRIPCION"/>
+                            <input class="form-control" id="DESCRIPCION" name="DESCRIPCION" type="text" placeholder="DESCRIPCION" required pattern="[A-Za-z]{2,300}"
+         title="Digite solo letras"/>
                           </div>
                          
                           <div class="form-group">
@@ -277,4 +298,12 @@
   </body>
 </html>
 
-
+<?php
+	}
+	else
+	{
+		?>
+		 <META HTTP-EQUIV="Refresh" CONTENT="0; URL=index.php">
+		 <?php
+	}
+?>

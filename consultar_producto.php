@@ -20,7 +20,7 @@
     <div class="bg-dark p-4">
       <h5 class="text-white h4">Consultar Producto </h5>
 
-      <span class="text-muted">Aqui puedes Consultar administrador  FarmWare</span>
+      <span class="text-muted">Aqui puedes Consultar los productos</span>
          <button type="button" class="btn btn-outline-primary">Inicio</button>
      <button type="button" class="btn btn-outline-primary">Blog</button>
      <button type="button" class="btn btn-outline-primary">Contacto</button>
@@ -120,15 +120,18 @@
                       
                        		<div class="form-group">
                        			<label for="NOMBRE">NOMBRE:</label>
-                       			<input class="form-control" id="NOMBRE" name="NOMBRE" type="text" placeholder="NOMBRE"/>
+                       			<input class="form-control" id="NOMBRE" name="NOMBRE" type="text" placeholder="NOMBRE" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras"/>
                        		</div>
                        		<div class="form-group">
                        			<label for="TIPO_PRODUCTO">TIPO DE PRODUCTO:</label>
-                       			<input class="form-control" id="TIPO_PRODUCTO" name="TIPO_PRODUCTO" type="text" placeholder="TIPO_PRODUCTO"/>
+                       			<input class="form-control" id="TIPO_PRODUCTO" name="TIPO_PRODUCTO" type="text" placeholder="TIPO_PRODUCTO" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras"/>
                            </div>
                            <div class="form-group">
                        			<label for="DESCRIPCION">DESCRIPCION:</label>
-                       			<input class="form-control" id="DESCRIPCION" name="DESCRIPCION" type="text" placeholder="DESCRIPCION"/>
+                       			<input class="form-control" id="DESCRIPCION" name="DESCRIPCION" type="text" placeholder="DESCRIPCION" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras"/>
                            </div>
                            <div class="form-group">
                        			<label for="CANTIDAD">CANTIDAD:</label>
@@ -162,19 +165,22 @@
                        		</div>
                        		<div class="form-group">
                        			<label for="NOMBRE">NOMBRE:</label>
-                       			<input class="form-control" id="nombre" name="nombre" type="text" /></input>
+                       			<input class="form-control" id="nombre" name="nombre" type="text" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras"/></input>
                        		</div>
                        		<div class="form-group">
                        			<label for="APELLIDO">TIPO DE PRODUCTO:</label>
-                       			<input class="form-control" id="tipo_producto" name="tipo_producto" type="text" /></input>
+                       			<input class="form-control" id="tipo_producto" name="tipo_producto" type="text" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras"/></input>
                            </div>
                            <div class="form-group">
                        			<label for="CIUDAD">DESCRIPCION:</label>
-                       			<input class="form-control" id="descripcion" name="descripcion" type="text" /></input>
+                       			<input class="form-control" id="descripcion" name="descripcion" type="text" required pattern="[A-Za-z]{2,30}"
+         title="Digite solo letras"/></input>
                            </div>
                            <div class="form-group">
                        			<label for="CORREO">CNTIDAD:</label>
-                       			<input class="form-control" id="cantidad" name="cantidad" type="text" /></input>
+                       			<input class="form-control" id="cantidad" name="cantidad" type="number" /></input>
                            </div>
                       
 

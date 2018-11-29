@@ -15,7 +15,7 @@
 	?>	
 
 		    <SCRIPT LANGUAGE="javascript"> 
-            alert(" el administrador fue ATUALIZADO"); 
+            alert(" el administrador fue ACTUALIZADO"); 
             </SCRIPT> 
             <META HTTP-EQUIV="Refresh" CONTENT="0; URL=consultar_administrador.php">
 
