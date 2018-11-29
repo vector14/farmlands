@@ -72,7 +72,7 @@
             })
         </script>
         <form id="formulario" method="post" action="" style="width: 50%; height: 70%; margin:4%  auto 0 auto ">
-            <label for="limite" class="card-title">Digite la variable y el numero de muestras que desea graficar</label>
+            <label for="limite" class="card-title">Digite el cultivo donde está la muestra, la variable y el numero de muestras que desea graficar</label>
             <h6 class="card-subtitle mb-2 text-muted">(Se graficaran de las ultimas muestras tomadas, dependiendo el limite que desee)</h6>
             
             <div class="input-group mb-3">

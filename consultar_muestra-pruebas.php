@@ -1,4 +1,10 @@
 <?php
+	session_start();
+	if(isset($_SESSION['resultado']))
+	{
+        $cadena= $_SESSION ['resultado'];
+       $rol= $cadena[3];
+       $DOCUMENTO= $cadena[4];
 ?><!doctype html>
 <html lang="en">
   <head>
@@ -297,3 +303,12 @@
   </body>
 </html>
 
+<?php
+	}
+	else
+	{
+		?>
+		 <META HTTP-EQUIV="Refresh" CONTENT="0; URL=index.php">
+		 <?php
+	}
+?>
