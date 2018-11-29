@@ -96,11 +96,19 @@
 		<div class="container" style="padding: 0">
 			<div class="row text-center text-xs-center text-sm-left text-md-left">
 				<div class="col-xs-12 col-sm-4 col-md-4">
-					<h5>Quick links</h5>
+					<h5>Desarrolladores</h5>
 					<ul class="list-unstyled quick-links">
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+						<li><a href="https://github.com/javierninco"><i class="fa fa-angle-double-right"></i>Hernando Ninco</a></li>
+						<li><a href="https://github.com/MaTrIxGg"><i class="fa fa-angle-double-right"></i>Juan Guayana</a></li>
+						<li><a href="https://github.com/vector14"><i class="fa fa-angle-double-right"></i>David Cano</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>Manuales</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="pdf/MANUAL_DE_USUARIO.pdf" target="_blank"><i class="fa fa-angle-double-right"></i>Manual de usuario</a></li>
+						<li><a href="pdf/MANUAL_TÉCNICO.pdf" target="_blank"><i class="fa fa-angle-double-right"></i>Manual Tecnico</a></li>
+						<li><a href="https://www.youtube.com/watch?v=818_G3AKLso&list=PLGR-Zuae2elGIypc87uxQnTWMgmJLU0UM"><i class="fa fa-angle-double-right"></i>Videos Explicativos</a></li>
 						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
 						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
 					</ul>
@@ -108,21 +116,11 @@
 				<div class="col-xs-12 col-sm-4 col-md-4">
 					<h5>Quick links</h5>
 					<ul class="list-unstyled quick-links">
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
-					</ul>
-				</div>
-				<div class="col-xs-12 col-sm-4 col-md-4">
-					<h5>Quick links</h5>
-					<ul class="list-unstyled quick-links">
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-						<li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
+						<li><a href="http://php.net/"><i class="fa fa-angle-double-right"></i>PHP</a></li>
+						<li><a href="https://www.mysql.com/"><i class="fa fa-angle-double-right"></i>MySQL</a></li>
+						<li><a href="https://developers.google.com/chart/"><i class="fa fa-angle-double-right"></i>Google Charts</a></li>
+						<li><a href="https://git-scm.com/"><i class="fa fa-angle-double-right"></i>Git</a></li>
+						<li><a href="https://code.visualstudio.com/"><i class="fa fa-angle-double-right"></i>Visual Studio Code</a></li>
 					</ul>
 				</div>
 			</div>
@@ -131,8 +129,8 @@
 					<ul class="list-unstyled list-inline social text-center">
 						<li class="list-inline-item"><a href="https://www.facebook.com/si.farmlands/" target="_blank"><i class="fa fa-facebook"></i></a></li>
 						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+						<li class="list-inline-item"><a href="https://github.com/MaTrIxGg/farmlands/"><i class="fa fa-github-alt"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.youtube.com/channel/UCfxH1S9ewu7XvpY-GGArH4Q?view_as=subscriber"><i class="fa fa-youtube"></i></a></li>
 						<li class="list-inline-item"><a id="mail" data-toggle="tooltip" data-placement="top" title="Clic para copiar el correo" href="javascript:copiarAlPortapapeles('p1');"><i class="fa fa-envelope"></i></a></li>
 					</ul>
 				</div>
@@ -140,8 +138,8 @@
 			</div>	
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-					<p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
-					<p class="h6">&copy Todos los derechos reservados.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Farmlands</a></p>
+					<p><u>Farmlands</u> es un sistema de informacion que permite realizar un seguimiento a un cultivo en especifico.</p>
+					<p class="h6">&copy Todos los derechos reservados.<a class="text-green ml-2" href="#" target="_blank">Farmlands</a></p>
 				</div>
 				</hr>
 			</div>	
