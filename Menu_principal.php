@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if(isset($_SESSION['nombreusu']))
+	if(isset($_SESSION['resultado']))
 	{
 ?>
 <!doctype html>
