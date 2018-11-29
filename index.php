@@ -7,7 +7,7 @@
     <title>Inicio de sesión</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="Shortcut Icon" type="image/x-icon" href="assets/icons/bbook.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/icons/favicon.ico"/>
    
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css2/material-design-iconic-font.min.css">

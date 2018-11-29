@@ -6,7 +6,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+   <link rel="shortcut icon" type="image/x-icon" href="assets/icons/favicon.ico"/>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap.css">	
 	<script src="js/metodos.js"></script>
