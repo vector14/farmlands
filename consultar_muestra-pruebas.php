@@ -12,6 +12,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <link rel="shortcut icon" type="image/x-icon" href="assets/icons/favicon.ico"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap.css">
 
@@ -20,40 +21,22 @@
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-success bg-success">
-        <a class="navbar-brand" href="#"> <img src="pl.png" width="30" height="30" class="d-inline-block align-top" alt="">Gestión Muestra</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span   class="navbar-toggler-icon"></span>
+        <a class="navbar-brand" href="menu_principal.php"><img src="assets/icons/Farmlands_logo.png" width="50" height="auto" class="d-inline-block align-center" alt=""></a>
+        <a class="navbar-brand" href="menu_principal.php"><img src="assets/icons/Letters.png" width="auto" height="45" class="d-inline-block align-center" alt=""></a>
+        <span class="navbar-brand d-inline-block align-center justify-content-center" style="color:#fff;">Consultar Muestra</span>
+        <button class="navbar-toggler" style="outline:0px" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i id="icon-toggler" style="color:#fff; font-size:22px" class="fas fa-bars"></i>
         </button>
       
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Proyectos
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">software</a>
-                <a class="dropdown-item" href="#">Hadware</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">mas información</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="#">Contacto</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Escribe que buscas" aria-label="Search">
-      <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
-    </form>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a href="cerrar.php"><button class="btn btn-success" style="" type="submit" ><i class="fas fa-power-off"></i> Cerrar Sesión</button></a>
+                    </li>
+                </ul>   
         </div>
       </nav>
+
       <table   class="table" >
   <thead class="bg-success">
     <tr>

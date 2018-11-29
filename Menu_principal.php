@@ -23,37 +23,19 @@
   <body>
 
    <nav class="navbar navbar-expand-lg navbar-success bg-success">
-        <a class="navbar-brand" href="#"> <img src="pl.png" width="30" height="30" class="d-inline-block align-top" alt="">Menu Principal: Administrador</a>
+        <a class="navbar-brand" href="menu_principal.php"><img src="assets/icons/Farmlands_logo.png" width="50" height="auto" class="d-inline-block align-center" alt=""></a>
+        <a class="navbar-brand" href="menu_principal.php"><img src="assets/icons/Letters.png" width="auto" height="45" class="d-inline-block align-center" alt=""></a>
+        <span class="navbar-brand d-inline-block align-center justify-content-center" style="color:#fff;">Menu Principal: Administrador</span>
         <button class="navbar-toggler" style="outline:0px" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <i id="icon-toggler" style="color:#fff; font-size:22px" class="fas fa-bars"></i>
         </button>
       
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Proyectos
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">software</a>
-                <a class="dropdown-item" href="#">Hadware</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">mas información</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="#">Contacto</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <a href="cerrar.php"> <button class="btn btn-success" type="submit" ><i class="fas fa-power-off"></i> Cerrar Sesión</button></a>
-            </form>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a href="cerrar.php"><button class="btn btn-success" style="" type="submit" ><i class="fas fa-power-off"></i> Cerrar Sesión</button></a>
+                    </li>
+                </ul>   
         </div>
       </nav>
         <!------------------ Efecto Hover 16 --------------->
@@ -147,11 +129,11 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
 					<ul class="list-unstyled list-inline social text-center">
-						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.facebook.com/si.farmlands/"><i class="fa fa-facebook"></i></a></li>
 						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
 						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
 						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+						<li class="list-inline-item"><a id="mail" data-toggle="tooltip" data-placement="top" title="Clic para copiar el correo" href="javascript:copiarAlPortapapeles('p1');"><i class="fa fa-envelope"></i></a></li>
 					</ul>
 				</div>
 				</hr>
@@ -159,7 +141,7 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
 					<p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
-					<p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
+					<p class="h6">&copy Todos los derechos reservados.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Farmlands</a></p>
 				</div>
 				</hr>
 			</div>	
@@ -179,7 +161,21 @@
   $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
+function copiarAlPortapapeles(id_elemento) {
+  var aux = document.createElement("input");
+  aux.setAttribute("value", document.getElementById(id_elemento).innerHTML);
+  document.body.appendChild(aux);
+  aux.select();
+  document.execCommand("copy");
+  document.body.removeChild(aux);
+    var tooltipc = document.getElementById("mail");
+    tooltipc.removeAttribute("data-original-title");
+    tooltipc.setAttribute("title", "Se ha copiado el correo");
+    tooltipc.setAttribute("data-original-title", "Se ha copiado el correo");
+    alert("Se ha copiado el correo");
+}
   </script>
+  <p hidden id="p1">official.farmlands@gmail.com</p>
   </body>
 </html>
 <?php
