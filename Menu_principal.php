@@ -98,7 +98,7 @@
                             <ul class="social">
                                 <li><a data-toggle="tooltip" data-placement="bottom" title="Cultivos" href="consultar_cultivo.php"><i class="fab fa-pagelines"></i></a></li>
                                 <li><a data-toggle="tooltip" data-placement="bottom" title="Secciones de Cultivo" href="consultar_seccion_de_cultivo.php"><i class="fas fa-puzzle-piece"></i></a></li>
-                                <li><a data-toggle="tooltip" data-placement="bottom" title="Muestras de Cultivo" href="#"><i class="fas fa-file-signature"></i></a></li>
+                                <li><a data-toggle="tooltip" data-placement="bottom" title="Muestras de Cultivo" href="consultar_muestra-pruebas.php"><i class="fas fa-file-signature"></i></a></li>
                                 <li><a data-toggle="tooltip" data-placement="bottom" title="Graficar Muestras" href="Google_Charts_Farmlands/vista/Graficar_Muestras.php"><i class="far fa-chart-bar"></i></a></li>
                                 <li><a data-toggle="tooltip" data-placement="bottom" title="Acerca de esta opcion" href="#"><i class="fas fa-info"></i></a></li>
                             </ul>
