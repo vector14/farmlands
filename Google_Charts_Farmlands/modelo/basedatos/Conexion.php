@@ -3,11 +3,11 @@
 class Conexion {
 
     public static function conectar() {
-        $localhost="den1.mysql5.gear.host";
+        $localhost="den1.mysql2.gear.host";
         $usuario="farmlandsdb";
-        $contraseña="Un7pr!E9U~90";
+        $contraseña="Tq6oRXcpM?_j";
         $basededatos="farmlandsdb";
-        $cnn = new PDO('mysql:host=den1.mysql5.gear.host;port=3306;dbname=farmlandsdb', 'farmlandsdb', 'Un7pr!E9U~90');
+        $cnn = new PDO('mysql:host=den1.mysql2.gear.host;port=3306;dbname=farmlandsdb', 'farmlandsdb', 'Tq6oRXcpM?_j');
         $cnn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $cnn;
     }
