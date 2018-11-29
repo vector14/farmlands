@@ -15,7 +15,7 @@ $con->close();
 ?>
 <html>
     <head>
-        
+           <link rel="shortcut icon" type="image/x-icon" href="../../assets/icons/favicon.ico"/>
         <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>      
         <script src="js/bootstrap.min.js" type="text/javascript"></script>   
