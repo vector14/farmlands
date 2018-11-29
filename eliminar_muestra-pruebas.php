@@ -6,7 +6,7 @@
 $mysqli=conectar();		
 	$sql = $mysqli->query("delete from muestra_prueba where ID_MUESTRA='$ID_MUESTRA'");	
 	echo "eliminado";
-	echo"<META HTTP-EQUIV='Refresh' CONTENT='0; URL=consultar_muestra - pruebas.php'>";
+	echo"<META HTTP-EQUIV='Refresh' CONTENT='0; URL=consultar_muestra-pruebas.php'>";
 		 
 
 ?>

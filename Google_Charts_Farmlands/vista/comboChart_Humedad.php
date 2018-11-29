@@ -4,10 +4,13 @@
         $contraseña="Gf7lq?P5~5oH";
         $basededatos="farmlandsdb";
 $con = new mysqli("$localhost", "$usuario", "$contraseña", "$basededatos");
+//$con = new mysqli("localhost", "root", "", "farmlandsdb");
 //$sql = "SELECT fecha_muestra, ph, temperatura_m, humedad, presion_atmosferica FROM muestra_prueba";
 $limite = $_POST["limite"];
-$cultivo = $
-$sql = "SELECT id_muestra, humedad FROM muestra_prueba order by id_muestra desc LIMIT $limite";
+$cultivo = $_POST["cultivo"];
+$sql =  "SELECT id_muestra, humedad FROM muestra_prueba mp
+        INNER JOIN seccion_de_cultivo sc ON mp.seccion_cultivo = sc.id_seccion
+        where sc.id_cultivo = $cultivo ORDER BY id_muestra DESC LIMIT $limite";
 $res = $con->query($sql);
 $con->close();
 ?>

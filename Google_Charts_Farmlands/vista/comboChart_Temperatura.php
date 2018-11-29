@@ -6,7 +6,10 @@
 $con = new mysqli("$localhost", "$usuario", "$contraseña", "$basededatos");
 //$sql = "SELECT fecha_muestra, ph, temperatura_m, humedad, presion_atmosferica FROM muestra_prueba";
 $limite = $_POST["limite"];
-$sql = "SELECT id_muestra, temperatura_a, temperatura_m FROM muestra_prueba order by id_muestra desc LIMIT $limite";
+$cultivo = $_POST["cultivo"];
+$sql = "SELECT id_muestra, temperatura_a, temperatura_m FROM muestra_prueba mp
+        INNER JOIN seccion_de_cultivo sc ON mp.seccion_cultivo = sc.id_seccion
+        where sc.id_cultivo = $cultivo ORDER BY id_muestra DESC LIMIT $limite";
 $res = $con->query($sql);
 $con->close();
 ?>

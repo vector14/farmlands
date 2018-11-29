@@ -88,8 +88,8 @@
 					echo "<tr>";
 					echo "<td>$fila[0]</td><td>$fila[1]</td><td>$fila[2]</td><td>$fila[3]</td><td>$fila[4]</td><td>$fila[5]</td><td>$fila[6]</td><td>$fila[7]</td><td>$fila[8]</td>";	
 					echo"<td>";						
-				    echo "<a  data-toggle='modal' data-target='#editUsu' data-ID_MUESTRA='" .$fila[0] ."' data-ph='" .$fila[1] ."' data-muestra_a='" .$fila[2] ."' data-muestra_m='" .$fila[3]."' data-humedad='".$fila[4]."' data-presion_atmosferica='".$fila[5]."' data-fecha_muestra='".$fila[6]."' data-color_hoja='".$fila[7]."' data-seccion_cultivo='".$fila[8]."' class='btn btn-warning'><span class='glyphicon glyphicon-pencil'></span>Editar</a> ";			
-					echo "<a class='btn btn-danger' href='eliminar_muestra - pruebas.php?ID_MUESTRA=" .$fila[0] ."'><span class='glyphicon glyphicon-remove'></span>Eliminar</a>";		
+				  echo "<a  data-toggle='modal' data-target='#editUsu' data-ID_MUESTRA='" .$fila[0] ."' data-ph='" .$fila[1] ."' data-muestra_a='" .$fila[2] ."' data-muestra_m='" .$fila[3]."' data-humedad='".$fila[4]."' data-presion_atmosferica='".$fila[5]."' data-fecha_muestra='".$fila[6]."' data-color_hoja='".$fila[7]."' data-seccion_cultivo='".$fila[8]."' class='btn btn-warning'><span class='glyphicon glyphicon-pencil'></span>Editar</a> ";			
+					echo "<a class='btn btn-danger' href='eliminar_muestra-pruebas.php?ID_MUESTRA=" .$fila[0] ."'><span class='glyphicon glyphicon-remove'></span>Eliminar</a>";		
 					echo "</td>";
 					echo "</tr>";
 				}
@@ -135,7 +135,7 @@
                         <h4><img src="pl.png" width="30" height="30" class="d-inline-block align-top" alt="">Nueva muestra</h4>                       
                     </div>
                     <div class="modal-body">
-                       <form action="crear_muestra - pruebas.php" method="GET">                 
+                       <form action="crear_muestra-pruebas.php" method="GET">                 
                           <div class="form-group">
                             <label for="PH">PH:</label>
                             <input class="form-control" id="PH" name="PH" type="text" placeholder="PH" required pattern="[0-9.]{1,25}"
@@ -205,7 +205,7 @@
                         <h4><img src="pl.png" width="30" height="30" class="d-inline-block align-top" alt="">Editar Muestra</h4>
                     </div>
                     <div class="modal-body">                      
-                       <form action="actualizar_muestra - pruebas.php" method="POST">                       		
+                       <form action="actualizar_muestra-pruebas.php" method="POST">                       		
                                                <label for="PH">PH:</label>
                             <input class="form-control" id="PH" name="PH" type="NUMBER" placeholder="PH"/>
                           </div>

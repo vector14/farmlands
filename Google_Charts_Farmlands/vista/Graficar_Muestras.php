@@ -74,6 +74,29 @@
         <form id="formulario" method="post" action="" style="width: 50%; height: 70%; margin:4%  auto 0 auto ">
             <label for="limite" class="card-title">Digite la variable y el numero de muestras que desea graficar</label>
             <h6 class="card-subtitle mb-2 text-muted">(Se graficaran de las ultimas muestras tomadas, dependiendo el limite que desee)</h6>
+            
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="Cultivo">Cultivo</label>
+                </div>
+                <select class="custom-select" id="Cultivo" name="cultivo">
+                    <option selected value="0">Seleccione el cultivo</option>
+              <?php
+                include("../../conexion.php");
+                $mysqli = conectar();
+
+                $consulta = "SELECT * FROM  cultivo";
+                if ($resultado = $mysqli->query($consulta)) {
+                    while ($fila = $resultado->fetch_row()) {
+                    echo "<option value=$fila[0]>$fila[0]</option>";
+                    }
+                    $resultado->close();
+                    }
+                    $mysqli->close();
+                ?>
+                </select>
+            </div>
+            
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="TipoGraf">Variable</label>
@@ -86,7 +109,10 @@
                     <option value="4">Presion Atmosferica</option>
                 </select>
             </div>
+
             <input type="number" name="limite" id="limite" class="custom-select" placeholder="Digite aqui un numero" required>
+                        
+            
             <input style="width: 50%; height: 70%; margin:4%  45% 0 25% " type="submit" class="btn btn-success" value="Aceptar" id="boton">
             <hidden id="selectedvalue"></hidden>
         </form>
