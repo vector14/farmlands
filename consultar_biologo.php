@@ -90,17 +90,15 @@
                        <form action="crear_biologo.php" method="GET">              		
                        <div class="form-group">
                             <label for="CIUDAD">DOCUMENTO:</label>
-                            <input class="form-control" id="DOCUMENTO" name="DOCUMENTO" type="number" placeholder="DOCUMENTO"/>
+                            <input class="form-control" id="DOCUMENTO" name="DOCUMENTO" type="text" placeholder="DOCUMENTO"/>
                           </div>
                        		<div class="form-group">
                        			<label for="NOMBRE">NOMBRE:</label>
-                       			<input class="form-control" id="NOMBRE" name="NOMBRE" type="text" placeholder="NOMBRE" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras"/>
+                       			<input class="form-control" id="NOMBRE" name="NOMBRE" type="text" placeholder="NOMBRE"/>
                        		</div>
                        		<div class="form-group">
                        			<label for="APELLIDO">APELLIDO:</label>
-                       			<input class="form-control" id="APELLIDO" name="APELLIDO" type="text" placeholder="APELLIDO" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras"/>
+                       			<input class="form-control" id="APELLIDO" name="APELLIDO" type="text" placeholder="APELLIDO"/>
                            </div>
                            <div class="form-group">
                        			<label for="DIRECCION">DIRECCION:</label>
@@ -124,18 +122,15 @@
                        		</div>
                            <div class="form-group">
                        			<label for="CIUDAD">CIUDAD:</label>
-                       			<input class="form-control" id="CIUDAD" name="CIUDAD" type="text" placeholder="CIUDAD" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras"/>
+                       			<input class="form-control" id="CIUDAD" name="CIUDAD" type="text" placeholder="CIUDAD"/>
                        		</div>
                            <div class="form-group">
                        			<label for="TIPO_DOCUMENTO">TIPO_DOCUMENTO:</label>
-                       			<input class="form-control" id="TIPO_DOCUMENTO" name="TIPO_DOCUMENTO" type="text" placeholder="TIPO_DOCUMENTO" required pattern="[A-Za-z.]{2,30}"
-         title="Digite solo letras"/>
+                       			<input class="form-control" id="TIPO_DOCUMENTO" name="TIPO_DOCUMENTO" type="text" placeholder="TIPO_DOCUMENTO"/>
                        		</div>
                            <div class="form-group">
                        			<label for="ENTIDAD_PROVENIENTE">ENTIDAD_PROVENIENTE:</label>
-                       			<input class="form-control" id="ENTIDAD_PROVENIENTE" name="ENTIDAD_PROVENIENTE" type="text" placeholder="ENTIDAD_PROVENIENTE" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras"/>
+                       			<input class="form-control" id="ENTIDAD_PROVENIENTE" name="ENTIDAD_PROVENIENTE" type="text" placeholder="ENTIDAD_PROVENIENTE"/>
                        		</div>
 
               <input type="submit" class="btn btn-success" value="registar">
@@ -158,17 +153,15 @@
                        		        
                        <div class="form-group">
                        			<label for="DOCUMENTO">DOCUMENTO:</label>
-                       			<input class="form-control" id="documento" name="documento" type="number"/></input>
+                       			<input class="form-control" id="documento" name="documento" type="text"/></input>
                        		</div>
                        		<div class="form-group">
                        			<label for="NOMBRE">NOMBRE:</label>
-                       			<input class="form-control" id="nombre" name="nombre" type="text" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras"/></input>
+                       			<input class="form-control" id="nombre" name="nombre" type="text" /></input>
                        		</div>
                        		<div class="form-group">
                        			<label for="APELLIDO">APELLIDO:</label>
-                       			<input class="form-control" id="apellido" name="apellido" type="text" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras"/></input>
+                       			<input class="form-control" id="apellido" name="apellido" type="text" /></input>
                            </div>
                            <div class="form-group">
                        			<label for="CIUDAD">DIRECCION:</label>
@@ -176,26 +169,23 @@
                            </div>
                            <div class="form-group">
                        			<label for="TELEFONO">TELEFONO:</label>
-                       			<input class="form-control" id="telefono" name="telefono" type="number"/>
+                       			<input class="form-control" id="telefono" name="telefono" type="text"/>
                        		</div>
                            <div class="form-group">
                        			<label for="TELEFONO">EDAD:</label>
-                       			<input class="form-control" id="edad" name="edad" type="number"/>
+                       			<input class="form-control" id="edad" name="edad" type="text"/>
                        		</div>
                            <div class="form-group">
                        			<label for="TELEFONO">CIUDAD:</label>
-                       			<input class="form-control" id="ciudad" name="ciudad" type="text" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras"/>
+                       			<input class="form-control" id="ciudad" name="ciudad" type="text"/>
                        		</div>
                            <div class="form-group">
                        			<label for="TELEFONO">TIPO DE DOCUMENTO:</label>
-                       			<input class="form-control" id="tipo_documento" name="tipo_documento" type="text" required pattern="[A-Za-z.]{2,30}"
-         title="Digite solo letras"/>
+                       			<input class="form-control" id="tipo_documento" name="tipo_documento" type="text"/>
                        		</div>
                            <div class="form-group">
                        			<label for="CORREO">ENTIDAD PROVENIENTE:</label>
-                       			<input class="form-control" id="entidad_proviniente" name="entidad_proviniente" type="text" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras" /></input>
+                       			<input class="form-control" id="entidad_proviniente" name="entidad_proviniente" type="text" /></input>
                            </div>
                           
 
@@ -242,4 +232,5 @@
     
   </body>
 </html>
+
 

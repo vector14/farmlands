@@ -33,6 +33,7 @@
         </div>
       </nav>
       
+   
     
     <table   class="table" >
   <thead class="bg-success">
@@ -99,22 +100,21 @@ $mysqli=conectar();
                        		
                            <div class="form-group">
                             <label for="CIUDAD">DOCUMENTO:</label>
-                  	<input class="form-control" id="DOCUMENTO" name="DOCUMENTO" type="number" placeholder="DOCUMENTO"/>
+                  	<input class="form-control" id="DOCUMENTO" name="DOCUMENTO" type="text" placeholder="DOCUMENTO"/>
+
+            
                           </div>
                        		<div class="form-group">
                        			<label for="NOMBRE">NOMBRE:</label>
-                       			<input class="form-control" id="NOMBRE" name="NOMBRE" type="text" placeholder="NOMBRE" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras"/>
+                       			<input class="form-control" id="NOMBRE" name="NOMBRE" type="text" placeholder="NOMBRE"/>
                        		</div>
                        		<div class="form-group">
                        			<label for="APELLIDO">APELLIDO:</label>
-                       			<input class="form-control" id="APELLIDO" name="APELLIDO" type="text" placeholder="APELLIDO" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras"/>
+                       			<input class="form-control" id="APELLIDO" name="APELLIDO" type="text" placeholder="APELLIDO"/>
                            </div>
                            <div class="form-group">
                        			<label for="CIUDAD">CIUDAD:</label>
-                       			<input class="form-control" id="CIUDAD" name="CIUDAD" type="text" placeholder="CIUDAD" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras"/>
+                       			<input class="form-control" id="CIUDAD" name="CIUDAD" type="text" placeholder="CIUDAD"/>
                            </div>
                            <div class="form-group">
                        			<label for="CORREO">CORREO:</label>
@@ -154,22 +154,19 @@ $mysqli=conectar();
                        		        
                        <div class="form-group">
                        			<label for="DOCUMENTO">DOCUMENTO:</label>
-                       			<input class="form-control" id="documento" name="documento" type="number"/></input>
+                       			<input class="form-control" id="documento" name="documento" type="text"/></input>
                        		</div>
                        		<div class="form-group">
                        			<label for="NOMBRE">NOMBRE:</label>
-                       			<input class="form-control" id="nombre" name="nombre" type="text" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras" /></input>
+                       			<input class="form-control" id="nombre" name="nombre" type="text" /></input>
                        		</div>
                        		<div class="form-group">
                        			<label for="APELLIDO">APELLIDO:</label>
-                       			<input class="form-control" id="apellido" name="apellido" type="text" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras"/></input>
+                       			<input class="form-control" id="apellido" name="apellido" type="text" /></input>
                            </div>
                            <div class="form-group">
                        			<label for="CIUDAD">CIUDAD:</label>
-                       			<input class="form-control" id="ciudad" name="ciudad" type="text" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras" /></input>
+                       			<input class="form-control" id="ciudad" name="ciudad" type="text" /></input>
                            </div>
                            <div class="form-group">
                        			<label for="CORREO">CORREO:</label>
@@ -177,7 +174,7 @@ $mysqli=conectar();
                            </div>
                            <div class="form-group">
                        			<label for="TELEFONO">TELEFONO:</label>
-                       			<input class="form-control" id="telefono" name="telefono" type="number"/>
+                       			<input class="form-control" id="telefono" name="telefono" type="text"/>
                        		</div>
 
                   <input type="submit" class="btn btn-success">		

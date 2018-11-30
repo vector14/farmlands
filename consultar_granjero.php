@@ -29,7 +29,6 @@
                 </ul>   
         </div>
       </nav>
-
       <table   class="table" >
   <thead class="bg-success">
     <tr>
@@ -94,33 +93,31 @@ $mysqli=conectar();
                        <form action="crear_granjero.php" method="GET">                 
                        <div class="form-group">
                             <label for="CIUDAD">DOCUMENTO:</label>
-                   <input class="form-control" id="DOCUMENTO" name="DOCUMENTO" type="number" placeholder="DOCUMENTO"/>
+                   <input class="form-control" id="DOCUMENTO" name="DOCUMENTO" type="text" placeholder="DOCUMENTO" required/>
                           </div>
                           <div class="form-group">
                             <label for="NOMBRE">NOMBRE:</label>
-                            <input class="form-control" id="NOMBRE" name="NOMBRE" type="text" placeholder="NOMBRE" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras"/>
+                            <input class="form-control" id="NOMBRE" name="NOMBRE" type="text" placeholder="NOMBRE" required/>
                           </div>
                           <div class="form-group">
                             <label for="APELLIDO">APELLIDO:</label>
-                            <input class="form-control" id="APELLIDO" name="APELLIDO" type="text" placeholder="APELLIDO" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras"/>
+                            <input class="form-control" id="APELLIDO" name="APELLIDO" type="text" placeholder="APELLIDO" required/>
                            </div>
                             <div class="form-group">
                        			<label for="USUARIO">USUARIO:</label>
-                       			<input class="form-control" id="USUARIO" name="USUARIO" type="text" placeholder="USUARIO"/>
+                       			<input class="form-control" id="USUARIO" name="USUARIO" type="text" placeholder="USUARIO" required/>
                        		</div>
                            <div class="form-group">
                        			<label for="CLAVE">CONTRASEÑA:</label>
-                       			<input class="form-control" id="CLAVE" name="CLAVE" type="text" placeholder="CLAVE"/>
+                       			<input class="form-control" id="CLAVE" name="CLAVE" type="text" placeholder="CLAVE" required/>
                        		</div>
                            <div class="form-group">
-                            <label for="TELEFONO">TIPO DOCUMENTO:</label>
-                            <input class="form-control" id="TIPO_DOCUMENTO" name="TIPO_DOCUMENTO" type="text" placeholder="TIPO_DOCUMENTO"/>
+                            <label for="TIPO_DOCUMENTO">TIPO DOCUMENTO:</label>
+                            <input class="form-control" id="TIPO_DOCUMENTO" name="TIPO_DOCUMENTO" type="text" required/>
                            </div>
-         <div class="form-group">
-                                <label for="EDAD">MUNICIPIO:</label>
-                                <select class="form-control" id="MUNICIPIO" name="MUNICIPIO" type="text" placeholder="MUNICIPIO">
+                           <div class="form-group">
+                            <label for="MUNICIPIO">MUNICIPIO:</label>
+                            <select class="form-control" id="MUNICIPIO" name="MUNICIPIO" type="text" placeholder="MUNICIPIO" required>
                                     <option value="Bogotá Distrito Capital">Bogotá Distrito Capital</option>
                                     <option value="Amazonas">Amazonas</option>
                                     <option value="Antioquia">Antioquia</option>
@@ -154,16 +151,15 @@ $mysqli=conectar();
                                     <option value="Vaupés">Vaupés</option>
                                     <option value="Vichada">Vichada</option>
                                 </select>
-                            </div>
+                          </div>
                            <div class="form-group">
-                            <label for="CIUDAD">DEPARTAMENTO:</label>
-<input class="form-control" id="DEPARTAMENTO" name="DEPARTAMENTO" type="text" placeholder="DEPARTAMENTO" />
-</div>
+                            <label for="DEPARTAMENTO">DEPARTAMENTO:</label>
+                            <input class="form-control" id="DEPARTAMENTO" name="DEPARTAMENTO" type="text" placeholder="DEPARTAMENTO"/>
+                          </div>
                            <div class="form-group">
-                            <label for="DIRECCION">EDAD:</label>
-                            <input class="form-control" id="EDAD" name="EDAD" type="number" placeholder="EDAD" />
+                            <label for="EDAD">EDAD:</label>
+                            <input class="form-control" id="EDAD" name="EDAD" type="number" placeholder="EDAD"/>
                            </div>
-
                          
                            <input type="submit" class="btn btn-success" value="registar">
               <button type="button"  class="btn   btn-warning  left " data-dismiss="modal">Cerrar</button>
@@ -187,36 +183,24 @@ $mysqli=conectar();
                        <form action="actualizar_granjero.php" method="POST">                       		
                        		        
                        <div class="form-group">
-                       			<label for="DOCUMENTO">DOCUMENTO:</label>
-                       			<input class="form-control" id="documento" name="documento" type="number"/>
+                       			<label for="documento">DOCUMENTO:</label>
+                       			<input class="form-control" id="documento" name="documento" type="text" required/>
                        		</div>
                        		<div class="form-group">
-                       			<label for="NOMBRE">NOMBRE:</label>
-                       			<input class="form-control" id="nombre" name="nombre" type="text" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras"/>
+                       			<label for="nombre">NOMBRE:</label>
+                       			<input class="form-control" id="nombre" name="nombre" type="text" required/>
                        		</div>
                        		<div class="form-group">
                        			<label for="APELLIDO">APELLIDO:</label>
-                       			<input class="form-control" id="apellido" name="apellido" type="text" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras"/>
+                       			<input class="form-control" id="apellido" name="apellido" type="text" required/>
                            </div>
                            <div class="form-group">
-                       			<label for="CORREO">TIPO DE DOCUMENTO:</label>
-                       			<input class="form-control" id="tipo_documento" name="tipo_documento" type="text" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras"/>
+                       			<label for="tipo_documento">TIPO DE DOCUMENTO:</label>
+                       			<input class="form-control" id="tipo_documento" name="tipo_documento" type="text" required/>
                            </div>
                            <div class="form-group">
-                       			<label for="">MUNICIPIO:</Label>
-                       			<input class="form-control" id="municipio" name="municipio" type="text"/>
-                       		</div>
-                           <div class="form-group">
-                       			<label for="TELEFONO">DEPARTAMENTO:</label>
-                       			<input class="form-control" id="departamento" name="departamento" type="text" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras"/>
-                       		</div>
-                           <div class="form-group">
-                       			<label for="TELEFONO">EDAD:</label>
-                       			<input class="form-control" id="edad" name="edad" type="number"/>
+                       			<label for="edad">EDAD:</label>
+                       			<input class="form-control" id="edad" name="edad" type="text" required/>
                        		</div>
 
                   <input type="submit" class="btn btn-success">			
@@ -259,6 +243,6 @@ $mysqli=conectar();
 		});
 		
 	</script>
-
+   
   </body>
 </html>

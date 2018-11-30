@@ -189,35 +189,22 @@
                        		        
                        <div class="form-group">
                        			<label for="DOCUMENTO">ID GRANJA:</label>
-                       			<input class="form-control" id="id_granja" name="id_granja" type="text"/></input>
+                       			<input class="form-control" id="id_granja" name="id_granja" type="text" required/></input>
                        		</div>
                        		<div class="form-group">
                        			<label for="NOMBRE">NOMBRE:</label>
-                       			<input class="form-control" id="nombre" name="nombre" type="text" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras"/></input>
+                       			<input class="form-control" id="nombre" name="nombre" type="text" required pattern="[A-Za-z 1-9]{2,30}"
+         title="Digite solo letras"/>
                        		</div>
-                       		<div class="form-group">
-                       			<label for="APELLIDO">TERRENO:</label>
-                       			<input class="form-control" id="terreno" name="terreno" type="number" /></input>
-                           </div>
-                           <div class="form-group">
-                       			<label for="CIUDAD">PISO TERMICO:</label>
-                       			<input class="form-control" id="piso_termico" name="piso_termico" type="text" /></input>
-                           </div>
-                           <div class="form-group">
-                       			<label for="CORREO">UBICACION:</label>
-                       			<input class="form-control" id="ubicacion" name="ubicacion" type="text" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras" /></input>
-                           </div>
                            <div class="form-group">
                        			<label for="TELEFONO">PRODUCTO ESPECIALIZADO:</label>
-                       			<input class="form-control" id="prodcuto_especializado" name="prodcuto_especializado" type="text"/>
+                       			<input class="form-control" id="prodcuto_especializado" name="prodcuto_especializado" type="text" required/>
                        		</div>
                    
 
                               <div class="form-group">
                        			<label for="TELEFONO">ID GRANJERO:</label>
-                       			<input class="form-control" id="id_granjero" name="id_granjero" type="text"/>
+                       			<input class="form-control" id="id_granjero" name="id_granjero" type="text" required/>
                        		</div>
 
                         

@@ -6,11 +6,9 @@
 			$NOMBRE = $_POST['nombre'];
       $APELLIDO = $_POST['apellido'];	
       $TIPO_DOCUMENTO = $_POST['tipo_documento'];
-			$MUNICIPIO = $_POST['municipio'];
-      $DEPARTAMENTO = $_POST['departamento'];	
       $EDAD = $_POST['edad'];	
      					
-      $sql = $mysqli->query("update granjero SET NOMBRE = '$NOMBRE', APELLIDO = '$APELLIDO', TIPO_DOCUMENTO = '$TIPO_DOCUMENTO', MUNICIPIO = '$MUNICIPIO', DEPARTAMENTO = '$DEPARTAMENTO', EDAD = '$EDAD' WHERE DOCUMENTO = '$DOCUMENTO'");			
+      $sql = $mysqli->query("update granjero SET NOMBRE = '$NOMBRE', APELLIDO = '$APELLIDO', TIPO_DOCUMENTO = '$TIPO_DOCUMENTO', EDAD = '$EDAD' WHERE DOCUMENTO = '$DOCUMENTO'");			
 			
 	?>	
 
