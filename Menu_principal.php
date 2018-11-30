@@ -52,7 +52,7 @@
                                 <li><a data-toggle="tooltip" data-placement="bottom" title="Administrador" href="consultar_administrador.php"><i class="fas fa-users-cog"></i></a></li>
                                 <li><a data-toggle="tooltip" data-placement="bottom" title="Biologo" href="consultar_biologo.php"><i class="fas fa-atom"></i></i></a></li>
                                 <li><a data-toggle="tooltip" data-placement="bottom" title="Granjero" href="consultar_granjero.php"><i class="fas fa-child"></i></a></li>
-                                <li><a data-toggle="tooltip" data-placement="bottom" title="Acerca de esta opcion" href="#"><i class="fas fa-info"></i></a></li>
+                                <li><a data-toggle="tooltip" data-placement="bottom" title="Acerca de esta opcion" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-info"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -112,7 +112,7 @@
 					</ul>
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4">
-					<h5>Quick links</h5>
+					<h5>Herramientas utilizadas</h5>
 					<ul class="list-unstyled quick-links">
 						<li><a href="http://php.net/" target="_blank"><i class="fa fa-angle-double-right"></i>PHP</a></li>
 						<li><a href="https://www.mysql.com/" target="_blank"><i class="fa fa-angle-double-right"></i>MySQL</a></li>
@@ -126,7 +126,7 @@
 				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
 					<ul class="list-unstyled list-inline social text-center">
 						<li class="list-inline-item"><a href="https://www.facebook.com/si.farmlands/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+						<li class="list-inline-item"><a href="https://twitter.com/offc_farmlands"><i class="fa fa-twitter"></i></a></li>
 						<li class="list-inline-item"><a href="https://github.com/MaTrIxGg/farmlands/" target="_blank"><i class="fa fa-github"></i></a></li>
 						<li class="list-inline-item"><a href="https://www.youtube.com/channel/UCfxH1S9ewu7XvpY-GGArH4Q?view_as=subscriber" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
 						<li class="list-inline-item"><a id="mail" data-toggle="tooltip" data-placement="top" title="Clic para copiar el correo" href="javascript:copiarAlPortapapeles('p1');"><i class="fa fa-envelope"></i></a></li>
@@ -144,7 +144,26 @@
 		</div>
 	</section>
 	<!-- ./Footer -->
-
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
