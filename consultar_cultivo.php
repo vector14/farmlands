@@ -218,42 +218,13 @@ $DOCUMENTO = $cadena[4];
                                     <input class="form-control" id="estado" name="estado" type="text" /></input>
                                 </div>
                                 <div class="form-group">
-                                    <label for="clima_actual">CLIMA ACTUAL:</label>
-                                    <input class="form-control" id="clima_actual" name="clima_actual" type="text" /></input>
-                                </div>
-                                <div class="form-group">
-                                    <label for="area_cultivo">AREA DE CULTIVO:</label>
-                                    <input class="form-control" id="area_cultivo" name="area_cultivo" type="text" /></input>
-                                </div>
-                                <div class="form-group">
-                                    <label for="fecha_inicio">FECHA DE INICIO:</label>
-                                    <input class="form-control" id="fecha_inicio" name="fecha_inicio" type="text"/>
-                                </div>
-                                <div class="form-group">
                                     <label for="producto">PRODUCTO:</label>
-                                    <input class="form-control" id="producto" name="producto" type="text"/>
+                                    <input class="form-control" id="producto" name="producto" type="text" disabled/>
                                 </div>
                                 <div class="form-group">
                                     <label for="CANTIDAD_PROD">CANTIDAD DE PRODUCTO A USAR:</label>
                                     <input class="form-control" id="CANTIDAD_PROD" name="cantidad_prod" type="number" placeholder="CANTIDAD"/>
                                 </div>
-                                <div class="form-group">
-                                    <label for="granjero">GRANJERO:</label>
-                                    <input class="form-control" id="granjero" name="granjero" type="text"/>
-                                </div>
-                                <div class="form-group">
-                                    <label for="id_granja">ID GRANJA:</label>
-                                    <input class="form-control" id="id_granja" name="id_granja" type="text"/>
-                                </div>
-                                <div class="form-group">
-                                    <label for="mar"> NIVEL DEL MAR:</label>
-                                    <input class="form-control" id="mar" name="nivel_del_mal" type="number" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="secciones"> SECCIONES DE CULTIVO:</label>
-                                    <input class="form-control" id="secciones" name="secciones" type="number" />
-                                </div>
-
                                 <input type="submit" class="btn btn-success">		
                                 <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>					
                             </form>
