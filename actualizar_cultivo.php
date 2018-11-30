@@ -21,4 +21,5 @@
 		    <SCRIPT LANGUAGE="javascript"> 
             alert(" el cultivo fue ACTUALIZADO"); 
             </SCRIPT> 
+                        <META HTTP-EQUIV="Refresh" CONTENT="0; URL=consultar_cultivo.php">
 
