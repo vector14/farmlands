@@ -52,7 +52,7 @@
                                 <li><a data-toggle="tooltip" data-placement="bottom" title="Administrador" href="consultar_administrador.php"><i class="fas fa-users-cog"></i></a></li>
                                 <li><a data-toggle="tooltip" data-placement="bottom" title="Biologo" href="consultar_biologo.php"><i class="fas fa-atom"></i></i></a></li>
                                 <li><a data-toggle="tooltip" data-placement="bottom" title="Granjero" href="consultar_granjero.php"><i class="fas fa-child"></i></a></li>
-                                <li><a title="Acerca de esta opcion" href="#" data-toggle="modal" data-target="#exampleModal"></a><i class="fas fa-info"></i></a></li>
+                                <li><a title="Acerca de esta opcion" href="#" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-info"></i></a></li>
                             </ul>
                         </div>
                     </div>
