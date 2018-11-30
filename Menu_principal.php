@@ -176,7 +176,6 @@
       <div class="modal-body">
         La funcion Granja le permite al granjero gestionar su propia granja, así como los productos que hay en su inventario. Solo seleccione la opcion que desee colocando el puntero en la opcion administrador y se desdplegaran las diferentes opciones que tiene la funcion Granja.
       </div>
-      </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
@@ -195,7 +194,6 @@
       </div>
       <div class="modal-body">
         La funcion Cultivo le permite al granjero gestionar sus cultivos, a su vez le permite hacer muestras al cultivo, dependiendo de la seccion que elija y por ultimo, la posibilidad de visualizar las muestras mediante una grafica interactiva. Solo seleccione la opcion que desee colocando el puntero en la opcion administrador y se desdplegaran las diferentes opciones que tiene la funcion Granja.
-      </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
