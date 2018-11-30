@@ -129,7 +129,7 @@
 					<ul class="list-unstyled list-inline social text-center">
 						<li class="list-inline-item"><a href="https://www.facebook.com/si.farmlands/" target="_blank"><i class="fa fa-facebook"></i></a></li>
 						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
-						<li class="list-inline-item"><a href="https://github.com/MaTrIxGg/farmlands/"><i class="fa fa-github-alt"></i></a></li>
+						<li class="list-inline-item"><a href="https://github.com/MaTrIxGg/farmlands/"><i class="fa fa-github"></i></a></li>
 						<li class="list-inline-item"><a href="https://www.youtube.com/channel/UCfxH1S9ewu7XvpY-GGArH4Q?view_as=subscriber"><i class="fa fa-youtube"></i></a></li>
 						<li class="list-inline-item"><a id="mail" data-toggle="tooltip" data-placement="top" title="Clic para copiar el correo" href="javascript:copiarAlPortapapeles('p1');"><i class="fa fa-envelope"></i></a></li>
 					</ul>
