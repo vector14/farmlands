@@ -225,7 +225,7 @@ function copiarAlPortapapeles(id_elemento) {
     tooltipc.removeAttribute("data-original-title");
     tooltipc.setAttribute("title", "Se ha copiado el correo");
     tooltipc.setAttribute("data-original-title", "Se ha copiado el correo");
-    alert("Se ha copiado el correo");
+    alert("Se ha copiado el correo en el portapapeles");
 }
   </script>
   <p hidden id="p1">official.farmlands@gmail.com</p>
