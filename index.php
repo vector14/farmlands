@@ -72,7 +72,7 @@ if (isset($_POST['txtpass'])) {
 $resultado3 = $mysqli->query("SELECT * FROM usuario where USERNAME='$login' and PASSWORD='$pass' and ROL='biologo'");
     $valida = $resultado->num_rows;
     $valida2 = $resultado2->num_rows;
-    $valida3 = $resultado2->num_rows;
+    $valida3 = $resultado3->num_rows;
     if ($valida!= 0) {
         $datosUsu = $resultado->fetch_row();
         $_SESSION['resultado'] = $datosUsu;
@@ -89,7 +89,7 @@ $resultado3 = $mysqli->query("SELECT * FROM usuario where USERNAME='$login' and 
         $datosUsu = $resultado3->fetch_row();
         $_SESSION['resultado'] = $datosUsu;
 
-        echo "<META HTTP-EQUIV='Refresh' CONTENT='0; URL=Menu_granjero.php'>";
+        echo "<META HTTP-EQUIV='Refresh' CONTENT='0; URL=Menu_biologo.php'>";
     }
     
     else {
