@@ -80,13 +80,13 @@ $resultado3 = $mysqli->query("SELECT * FROM usuario where USERNAME='$login' and 
         echo "<META HTTP-EQUIV='Refresh' CONTENT='0; URL=Menu_principal.php'>";
     }
     elseif ($valida2!= 0) {
-        $datosUsu = $resultado2->fetch_row();
+        $datosUsu = $resultado3->fetch_row();
         $_SESSION['resultado'] = $datosUsu;
 
         echo "<META HTTP-EQUIV='Refresh' CONTENT='0; URL=Menu_granjero.php'>";
     }
     elseif ($valida3!= 0) {
-        $datosUsu = $resultado3->fetch_row();
+        $datosUsu = $resultado2->fetch_row();
         $_SESSION['resultado'] = $datosUsu;
 
         echo "<META HTTP-EQUIV='Refresh' CONTENT='0; URL=Menu_biologo.php'>";

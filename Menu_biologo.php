@@ -18,7 +18,7 @@
   	<link rel="stylesheet" href="css2/menu_principal.css">
   	<link rel="stylesheet" href="css2/menu_principal2.css">
 
-    <title>Menu Granjero</title>
+    <title>Menu Biologo</title>
   </head>
   <body>
 
