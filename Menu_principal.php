@@ -66,7 +66,7 @@
                             <ul class="social">
                                 <li><a data-toggle="tooltip" data-placement="bottom" title="Granjas" href="consultar_granja.php"><i class="fas fa-warehouse"></i></a></li>
                                 <li><a data-toggle="tooltip" data-placement="bottom" title="Producto" href="consultar_producto.php"><i class="far fa-lemon"></i></a></li>
-                                <li><a data-toggle="tooltip" data-placement="bottom" title="Acerca de esta opcion" href="#"><i class="fas fa-info"></i></a></li>
+                                <li><a title="Acerca de esta opcion" href="#" data-toggle="modal" data-target="#exampleModal2" href="#"><i class="fas fa-info"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -82,7 +82,7 @@
                                 <li><a data-toggle="tooltip" data-placement="bottom" title="Secciones de Cultivo" href="consultar_seccion_de_cultivo.php"><i class="fas fa-puzzle-piece"></i></a></li>
                                 <li><a data-toggle="tooltip" data-placement="bottom" title="Muestras de Cultivo" href="consultar_muestra-pruebas.php"><i class="fas fa-file-signature"></i></a></li>
                                 <li><a data-toggle="tooltip" data-placement="bottom" title="Graficar Muestras" href="Google_Charts_Farmlands/vista/Graficar_Muestras.php"><i class="far fa-chart-bar"></i></a></li>
-                                <li><a data-toggle="tooltip" data-placement="bottom" title="Acerca de esta opcion" href="#"><i class="fas fa-info"></i></a></li>
+                                <li><a title="Acerca de esta opcion" href="#" data-toggle="modal" data-target="#exampleModal3" href="#"><i class="fas fa-info"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -149,22 +149,60 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Acerca de: Administrador</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+        La funcion Administrador, permite crear cada tipo de usuario (Administrador, Granjero, Biologo), tambien tiene la posibilidad de modificar y eliminar cualquiera de estos. Solo seleccione la opcion que desee colocando el puntero en la opcion administrador y se desdplegaran las diferentes opciones que tiene la funcion Administrador.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>
 </div>
 
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel2">Acerca de: Granja</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        La funcion Granja le permite al granjero gestionar su propia granja, así como los productos que hay en su inventario. Solo seleccione la opcion que desee colocando el puntero en la opcion administrador y se desdplegaran las diferentes opciones que tiene la funcion Granja.
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel3">Acerca de: Cultivo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        La funcion Cultivo le permite al granjero gestionar sus cultivos, a su vez le permite hacer muestras al cultivo, dependiendo de la seccion que elija y por ultimo, la posibilidad de visualizar las muestras mediante una grafica interactiva. Solo seleccione la opcion que desee colocando el puntero en la opcion administrador y se desdplegaran las diferentes opciones que tiene la funcion Granja.
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
     <!-- Optional JavaScript -->
