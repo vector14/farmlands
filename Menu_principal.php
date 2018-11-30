@@ -223,8 +223,8 @@ function copiarAlPortapapeles(id_elemento) {
   document.body.removeChild(aux);
     var tooltipc = document.getElementById("mail");
     tooltipc.removeAttribute("data-original-title");
-    tooltipc.setAttribute("title", "Se ha copiado el correo");
-    tooltipc.setAttribute("data-original-title", "Se ha copiado el correo");
+    tooltipc.setAttribute("title", "Se ha copiado el correo en el portapapeles");
+    tooltipc.setAttribute("data-original-title", "Se ha copiado el correo en el portapapeles");
     alert("Se ha copiado el correo en el portapapeles");
 }
   </script>
