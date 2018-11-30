@@ -78,9 +78,11 @@ while ($fila = $res->fetch_assoc()) {
             
             
     
-    <nav class="navbar navbar-expand-lg navbar-success bg-green">
-        <a class="navbar-brand" href="#" style="color:white"> <img src="pl.png" width="30" height="30" class="d-inline-block align-top" alt="">Tabla de presion Atmosferica</a>
-        <a class="navbar-brand right" href="Graficar_Muestras.php">Volver al inicio</a>
+    <nav class="navbar navbar-expand-lg navbar-success bg-green" style="height:80px">
+        <a class="navbar-brand" href="../../menu_principal.php"><img src="../../assets/icons/Farmlands_logo.png" width="50" height="auto" class="d-inline-block align-center" alt=""></a>
+        <a class="navbar-brand" href="../../menu_principal.php"><img src="../../assets/icons/Letters.png" width="auto" height="45" class="d-inline-block align-center" alt=""></a>
+        <a class="navbar-brand" href="#" style="color:white; position:relative; top: 15px; font-size:20px" class="d-inline-block align-bottom">Tabla de presion Atmosferica</a>
+        <a class="navbar-brand right" href="Graficar_Muestras.php" style="color:white; position:relative; top: 15px; font-size:20px">Volver al inicio</a>
     </nav>
     
  
