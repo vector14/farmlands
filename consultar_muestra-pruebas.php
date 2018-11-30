@@ -157,7 +157,7 @@
       {
         while ($fila = $resultado->fetch_row()) 
         {         
-          echo "<option value=$fila[0]  >    $fila[2]  </option>";
+          echo "<option value=$fila[0]  >    $fila[0]  </option>";
  
         }
         $resultado->close();
@@ -232,7 +232,7 @@
       {
         while ($fila = $resultado->fetch_row()) 
         {         
-          echo "<option value=$fila[0]  >    $fila[2]  </option>";
+          echo "<option value=$fila[0]  >    $fila[0]  </option>";
  
         }
         $resultado->close();
