@@ -38,7 +38,7 @@
       </nav>
 
       <table   class="table" >
-  <thead class="bg-success">
+ <thead class="bg-success">
     <tr>
       
       <th scope="col">ID MUESTRA</th>
@@ -71,7 +71,7 @@
 					echo "<tr>";
 					echo "<td>$fila[0]</td><td>$fila[1]</td><td>$fila[2]</td><td>$fila[3]</td><td>$fila[4]</td><td>$fila[5]</td><td>$fila[6]</td><td>$fila[7]</td><td>$fila[8]</td>";	
 					echo"<td>";						
-				  echo "<a  data-toggle='modal' data-target='#editUsu' data-ID_MUESTRA='" .$fila[0] ."' data-ph='" .$fila[1] ."' data-muestra_a='" .$fila[2] ."' data-muestra_m='" .$fila[3]."' data-humedad='".$fila[4]."' data-presion_atmosferica='".$fila[5]."' data-fecha_muestra='".$fila[6]."' data-color_hoja='".$fila[7]."' data-seccion_cultivo='".$fila[8]."' class='btn btn-warning'><span class='glyphicon glyphicon-pencil'></span>Editar</a> ";			
+				    echo "<a  data-toggle='modal' data-target='#editUsu' data-ID_MUESTRA='" .$fila[0] ."' data-ph='" .$fila[1] ."' data-muestra_a='" .$fila[2] ."' data-muestra_m='" .$fila[3]."' data-humedad='".$fila[4]."' data-presion_atmosferica='".$fila[5]."' data-fecha_muestra='".$fila[6]."' data-color_hoja='".$fila[7]."' data-seccion_cultivo='".$fila[8]."' class='btn btn-warning'><span class='glyphicon glyphicon-pencil'></span>Editar</a> ";			
 					echo "<a class='btn btn-danger' href='eliminar_muestra-pruebas.php?ID_MUESTRA=" .$fila[0] ."'><span class='glyphicon glyphicon-remove'></span>Eliminar</a>";		
 					echo "</td>";
 					echo "</tr>";
@@ -86,7 +86,7 @@
   </tbody>
 </table>
 
-<table   class="table" >
+<table class="table" >
 
 <tr>
   
@@ -144,7 +144,8 @@
                             <input class="form-control" id="FECHA_MUESTRA" name="FECHA_MUESTRA" type="date" placeholder="FECHA_MUESTRA"/>
                           </div><div class="form-group">
                             <label for="COLOR_HOJA">COLOR DE LA HOJA:</label>
-                            <input class="form-control" id="COLOR_HOJA" name="COLOR_HOJA" type="color"/>
+                            <input  id="COLOR_HOJA" name="COLOR_HOJA" type="color" value="#f3f3f3" />
+                         
                           </div>
                          <div class="form-group">
                         <label for="SECCION_CULTIVO">SECCION DEL CULTIVO:</label>
@@ -188,9 +189,15 @@
                         <h4><img src="pl.png" width="30" height="30" class="d-inline-block align-top" alt="">Editar Muestra</h4>
                     </div>
                     <div class="modal-body">                      
-                       <form action="actualizar_muestra-pruebas.php" method="POST">                       		
-                                               <label for="PH">PH:</label>
-                            <input class="form-control" id="PH" name="PH" type="NUMBER" placeholder="PH"/>
+                       <form action="actualizar_muestra - pruebas.php" method="POST">  
+                          <div class="form-group">
+                            <label for="DOCUMENTO">ID MUESTRA:</label>
+                            <input  class="form-control" id="id_muestra" name="id_muestra" type="text" readonly="readonly"/></input>
+                          </div>
+                          <div class="form-group">
+                            <label for="PH">PH:</label>
+                            <input class="form-control" id="PH" name="PH" type="text" placeholder="PH" required pattern="[0-9.]{1,25}"
+         title="Digite solo numeros"/>
                           </div>
                           <div class="form-group">
                             <label for="TEMPERATURA_A">TEMPERATURA AMBIENTE:</label>
@@ -200,6 +207,7 @@
                              <label for="TEMPERATURA_M">TEMPERATURA DEL MEDIO:</label>
                             <input class="form-control" id="TEMPERATURA_M" name="TEMPERATURA_M" type="NUMBER" placeholder="TEMPERATURA DEL MEDIO"/>
                           </div>
+                          <div class="form-group">
                             <label for="HUMEDAD">HUMEDAD:</label>
                             <input class="form-control" id="HUMEDAD" name="HUMEDAD" type="NUMBER" placeholder="HUMEDAD"/>
                           </div>
@@ -212,7 +220,7 @@
                             <input class="form-control" id="FECHA_MUESTRA" name="FECHA_MUESTRA" type="date" placeholder="FECHA_MUESTRA"/>
                           </div><div class="form-group">
                             <label for="COLOR_HOJA">COLOR DE LA HOJA:</label>
-                            <input class="form-control" id="COLOR_HOJA" name="COLOR_HOJA" type="color" placeholder="COLOR DE LA HOJA"/>
+                            <input id="COLOR_HOJA" name="COLOR_HOJA" type="color" value="f3f3f3" />
                           </div>
                          <div class="form-group">
                         <label for="SECCION_CULTIVO">SECCION DEL CULTIVO:</label>
