@@ -21,10 +21,23 @@
         <button class="navbar-toggler" style="outline:0px" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <i id="icon-toggler" style="color:#fff; font-size:22px" class="fas fa-bars"></i>
         </button>
-      
+      <style>
+      	#help{
+      		margin-right: 20px;
+      		transition: all 0.3s;
+      	}
+      	#help:hover{
+			text-decoration: none;
+			color: white;
+
+      	}
+      </style>
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
+                    	<a data-toggle="tooltip" data-placement="bottom" title="Como funciona esta opcion?" id="help" data-fancybox href="https://www.youtube.com/watch?v=818_G3AKLso">
+    						<i style="font-size: 20px;" class="fas fa-question-circle"></i>
+						</a>
                         <a href="../../cerrar.php"><button class="btn btn-success" style="" type="submit" ><i class="fas fa-power-off"></i> Cerrar Sesión</button></a>
                     </li>
                 </ul>   
@@ -54,6 +67,9 @@
                         alert("Seleccione una variable");
                 }
             })
+              $(function () {
+  				$('[data-toggle="tooltip"]').tooltip()
+			})
         </script>
         <form id="formulario" method="post" action="" style="width: 50%; height: 70%; margin:4%  auto 0 auto ">
             <label for="limite" class="card-title">Digite el cultivo donde está la muestra, la variable y el numero de muestras que desea graficar</label>
@@ -106,5 +122,8 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
+
     </body>
 </html>
