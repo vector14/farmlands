@@ -7,7 +7,7 @@ class Conexion {
         $usuario="farmlandsdb";
         $contraseña="Gf7lq?P5~5oH";
         $basededatos="farmlandsdb";
-        $cnn = new PDO('mysql:host=localhost;port=3306;dbname=farmlandsdb', 'root', '');
+        $cnn = new PDO('mysql:host=den1.mysql5.gear.host;port=3306;dbname=farmlandsdb', 'farmlandsdb', 'Gf7lq?P5~5oH');
         $cnn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $cnn;
     }

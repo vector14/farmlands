@@ -1,7 +1,7 @@
 <?php
-        $localhost="localhost";
-        $usuario="root";
-        $contraseña="";
+        $localhost="den1.mysql5.gear.host";
+        $usuario="farmlandsdb";
+        $contraseña="Gf7lq?P5~5oH";
         $basededatos="farmlandsdb";
 $con = new mysqli("$localhost", "$usuario", "$contraseña", "$basededatos");
 //$con = new mysqli("localhost", "root", "", "farmlandsdb");
