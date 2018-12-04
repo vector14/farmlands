@@ -29,7 +29,7 @@
                 </ul>   
         </div>
       </nav>
-      <table   class="table" >
+<table   class="table" >
   <thead class="bg-success">
     <tr>
 
@@ -93,71 +93,38 @@ $mysqli=conectar();
                        <form action="crear_granjero.php" method="GET">                 
                        <div class="form-group">
                             <label for="CIUDAD">DOCUMENTO:</label>
-                   <input class="form-control" id="DOCUMENTO" name="DOCUMENTO" type="text" placeholder="DOCUMENTO" required/>
+                   <input class="form-control" id="DOCUMENTO" name="DOCUMENTO" type="text" placeholder="DOCUMENTO"/>
                           </div>
                           <div class="form-group">
                             <label for="NOMBRE">NOMBRE:</label>
-                            <input class="form-control" id="NOMBRE" name="NOMBRE" type="text" placeholder="NOMBRE" required/>
+                            <input class="form-control" id="NOMBRE" name="NOMBRE" type="text" placeholder="NOMBRE"/>
                           </div>
                           <div class="form-group">
                             <label for="APELLIDO">APELLIDO:</label>
-                            <input class="form-control" id="APELLIDO" name="APELLIDO" type="text" placeholder="APELLIDO" required/>
+                            <input class="form-control" id="APELLIDO" name="APELLIDO" type="text" placeholder="APELLIDO"/>
                            </div>
                             <div class="form-group">
                        			<label for="USUARIO">USUARIO:</label>
-                       			<input class="form-control" id="USUARIO" name="USUARIO" type="text" placeholder="USUARIO" required/>
+                       			<input class="form-control" id="USUARIO" name="USUARIO" type="text" placeholder="USUARIO"/>
                        		</div>
                            <div class="form-group">
                        			<label for="CLAVE">CONTRASEÑA:</label>
-                       			<input class="form-control" id="CLAVE" name="CLAVE" type="text" placeholder="CLAVE" required/>
+                       			<input class="form-control" id="CLAVE" name="CLAVE" type="text" placeholder="CLAVE"/>
                        		</div>
                            <div class="form-group">
-                            <label for="TIPO_DOCUMENTO">TIPO DOCUMENTO:</label>
-                            <input class="form-control" id="TIPO_DOCUMENTO" name="TIPO_DOCUMENTO" type="text" required/>
+                            <label for="TELEFONO">TIPO DOCUMENTO:</label>
+                            <input class="form-control" id="TIPO_DOCUMENTO" name="TIPO_DOCUMENTO" type="text" placeholder="TIPO_DOCUMENTO"/>
                            </div>
                            <div class="form-group">
-                            <label for="MUNICIPIO">MUNICIPIO:</label>
-                            <select class="form-control" id="MUNICIPIO" name="MUNICIPIO" type="text" placeholder="MUNICIPIO" required>
-                                    <option value="Bogotá Distrito Capital">Bogotá Distrito Capital</option>
-                                    <option value="Amazonas">Amazonas</option>
-                                    <option value="Antioquia">Antioquia</option>
-                                    <option value="Arauca">Arauca</option>
-                                    <option value="Atlántico">Atlántico</option>
-                                    <option value="Bolívar">Bolívar</option>
-                                    <option value="Boyacá">Boyacá</option>
-                                    <option value="Caldas">Caldas</option>
-                                    <option value="Caquetá">Caquetá</option>
-                                    <option value="Casanare">Casanare</option>
-                                    <option value="Cauca">Cauca</option>
-                                    <option value="Cesar">Cesar</option>
-                                    <option value="Cordoba">Cordoba</option>
-                                    <option value="Cundinamarca">Cundinamarca</option>
-                                    <option value="Chocó">Chocó</option>
-                                    <option value="Guainía">Guainía</option>
-                                    <option value="Guaviare">Guaviare</option>
-                                    <option value="Huila">Huila</option>
-                                    <option value="La Guajira">La Guajira</option>
-                                    <option value="Magdalena">Magdalena</option>
-                                    <option value="Meta">Meta</option>
-                                    <option value="Nariño">Nariño</option>
-                                    <option value="Norte de Santander">Norte de Santander</option>
-                                    <option value="Putumayo">Putumayo</option>
-                                    <option value="Quindio">Risaralda</option>
-                                    <option value="Santander">Santander</option>
-                                    <option value="San Andrés y Providencia">San Andrés y Providencia</option>
-                                    <option value="Sucre">Sucre</option>
-                                    <option value="Tolima">Tolima</option>
-                                    <option value="Valle del Cauca">Valle del Cauca</option>
-                                    <option value="Vaupés">Vaupés</option>
-                                    <option value="Vichada">Vichada</option>
-                                </select>
+                            <label for="EDAD">MUNICIPIO:</label>
+                            <input class="form-control" id="MUNICIPIO" name="MUNICIPIO" type="text" placeholder="MUNICIPIO"/>
                           </div>
                            <div class="form-group">
-                            <label for="DEPARTAMENTO">DEPARTAMENTO:</label>
+                            <label for="CIUDAD">DEPARTAMENTO:</label>
                             <input class="form-control" id="DEPARTAMENTO" name="DEPARTAMENTO" type="text" placeholder="DEPARTAMENTO"/>
                           </div>
                            <div class="form-group">
-                            <label for="EDAD">EDAD:</label>
+                            <label for="DIRECCION">EDAD:</label>
                             <input class="form-control" id="EDAD" name="EDAD" type="number" placeholder="EDAD"/>
                            </div>
                          
@@ -183,24 +150,32 @@ $mysqli=conectar();
                        <form action="actualizar_granjero.php" method="POST">                       		
                        		        
                        <div class="form-group">
-                       			<label for="documento">DOCUMENTO:</label>
-                       			<input class="form-control" id="documento" name="documento" type="text" required/>
+                       			<label for="DOCUMENTO">DOCUMENTO:</label>
+                       			<input class="form-control" id="documento" name="documento" type="text"/>
                        		</div>
                        		<div class="form-group">
-                       			<label for="nombre">NOMBRE:</label>
-                       			<input class="form-control" id="nombre" name="nombre" type="text" required/>
+                       			<label for="NOMBRE">NOMBRE:</label>
+                       			<input class="form-control" id="nombre" name="nombre" type="text" />
                        		</div>
                        		<div class="form-group">
                        			<label for="APELLIDO">APELLIDO:</label>
-                       			<input class="form-control" id="apellido" name="apellido" type="text" required/>
+                       			<input class="form-control" id="apellido" name="apellido" type="text" />
                            </div>
                            <div class="form-group">
-                       			<label for="tipo_documento">TIPO DE DOCUMENTO:</label>
-                       			<input class="form-control" id="tipo_documento" name="tipo_documento" type="text" required/>
+                       			<label for="CORREO">TIPO DE DOCUMENTO:</label>
+                       			<input class="form-control" id="tipo_documento" name="tipo_documento" type="text" />
                            </div>
                            <div class="form-group">
-                       			<label for="edad">EDAD:</label>
-                       			<input class="form-control" id="edad" name="edad" type="text" required/>
+                       			<label for="">MUNICIPIO:</Label>
+                       			<input class="form-control" id="municipio" name="municipio" type="text"/>
+                       		</div>
+                           <div class="form-group">
+                       			<label for="TELEFONO">DEPARTAMENTO:</label>
+                       			<input class="form-control" id="departamento" name="departamento" type="text"/>
+                       		</div>
+                           <div class="form-group">
+                       			<label for="TELEFONO">EDAD:</label>
+                       			<input class="form-control" id="edad" name="edad" type="text"/>
                        		</div>
 
                   <input type="submit" class="btn btn-success">			

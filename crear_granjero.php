@@ -21,7 +21,6 @@ $sql = $mysqli->query("insert into granjero (DOCUMENTO, NOMBRE, APELLIDO,TIPO_DO
 </SCRIPT>';    
 }
 ?>	
-?>	
 
 <SCRIPT LANGUAGE="javascript">
     alert(" el granjero fue Registrado");

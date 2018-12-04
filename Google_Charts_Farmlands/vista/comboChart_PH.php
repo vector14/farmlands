@@ -1,7 +1,7 @@
 <?php
-        $localhost="den1.mysql5.gear.host";
-        $usuario="farmlandsdb";
-        $contraseña="Gf7lq?P5~5oH";
+        $localhost="localhost";
+        $usuario="root";
+        $contraseña="";
         $basededatos="farmlandsdb";
 $con = new mysqli("$localhost", "$usuario", "$contraseña", "$basededatos");
 //$sql = "SELECT fecha_muestra, ph, temperatura_m, humedad, presion_atmosferica FROM muestra_prueba";

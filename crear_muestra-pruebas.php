@@ -3,7 +3,7 @@
 
 	include("conexion.php");
 	$mysqli=conectar();
-	$ID_MUESTRA = $_GET['ID_MUESTRA'];	
+
 			$PH = $_GET['PH'];
       $TEMPERATURA_A = $_GET['TEMPERATURA_A'];	
       $TEMPERATURA_M = $_GET['TEMPERATURA_M'];
@@ -20,5 +20,5 @@
 		    <SCRIPT LANGUAGE="javascript"> 
             alert(" la muestra fue Registrada"); 
             </SCRIPT> 
-           
-            <META HTTP-EQUIV="Refresh" CONTENT="0; URL=consultar_muestra-pruebas.php">
+                 <META HTTP-EQUIV="Refresh" CONTENT="0; URL=consultar_muestra-pruebas.php">      
+            

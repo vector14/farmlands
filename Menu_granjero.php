@@ -39,6 +39,9 @@
         </div>
       </nav>
         <!------------------ Efecto Hover 16 --------------->
+          <div class="container mt-40" style="margin-bottom: 20px">
+            <h3 class="text-center">Bienvenido! Escoja una opcion</h3>
+            <div class="row mt-30">
                 <div class="col-md-4 col-sm-6">
                     <div class="box16">
                         <img src="assets/icons/Granja.jpg">
@@ -70,6 +73,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
           <!------------------ Efecto Hover 16 --------------->
 </div>

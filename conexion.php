@@ -1,8 +1,8 @@
 <?php
 function conectar(){
-$localhost="den1.mysql5.gear.host";
-  $usuario="farmlandsdb";
-  $contraseña="Gf7lq?P5~5oH";
+$localhost="localhost";
+  $usuario="root";
+  $contraseña="";
   $basededatos="farmlandsdb";
             $mysqli = new mysqli("$localhost", "$usuario", "$contraseña" , "$basededatos");	
             if ($mysqli->connect_errno) {

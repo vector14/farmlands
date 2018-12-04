@@ -25,7 +25,7 @@
    <nav class="navbar navbar-expand-lg navbar-success bg-success">
         <a class="navbar-brand" href="menu_principal.php"><img src="assets/icons/Farmlands_logo.png" width="50" height="auto" class="d-inline-block align-center" alt=""></a>
         <a class="navbar-brand" href="menu_principal.php"><img src="assets/icons/Letters.png" width="auto" height="45" class="d-inline-block align-center" alt=""></a>
-        <span class="navbar-brand d-inline-block align-center justify-content-center" style="color:#fff;">Menu Principal: Granjero</span>
+        <span class="navbar-brand d-inline-block align-center justify-content-center" style="color:#fff;">Menu Principal: Biologo</span>
         <button class="navbar-toggler" style="outline:0px" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <i id="icon-toggler" style="color:#fff; font-size:22px" class="fas fa-bars"></i>
         </button>
@@ -39,6 +39,9 @@
         </div>
       </nav>
         <!------------------ Efecto Hover 16 --------------->
+               <div class="container mt-40" style="margin-bottom: 20px">
+            <h3 class="text-center">Bienvenido! Escoja una opcion</h3>
+            <div class="row mt-30">
                 <div class="col-md-4 col-sm-6">
                     <div class="box16">
                         <img src="assets/icons/Cultivo.jpg">
@@ -53,6 +56,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
           <!------------------ Efecto Hover 16 --------------->
 </div>
