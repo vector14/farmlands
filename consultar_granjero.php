@@ -167,11 +167,41 @@ $mysqli=conectar();
                            </div>
                            <div class="form-group">
                        			<label for="">MUNICIPIO:</Label>
-                       			<input class="form-control" id="municipio" name="municipio" type="text"/>
+                       			 <select class="form-control"name="DEPARTAMENTO" id="DEPARTAMENTO" > 
+<?php
+        $mysqli=conectar();
+      $consulta= "SELECT * FROM  departamento";
+      if ($resultado = $mysqli->query($consulta)) 
+      {
+        while ($fila = $resultado->fetch_row()) 
+        {         
+          echo "<option value=$fila[0]  >    $fila[1]  </option>";
+ 
+        }
+        $resultado->close();
+      }
+      $mysqli->close();     
+?>
+                             </select>
                        		</div>
                            <div class="form-group">
                        			<label for="TELEFONO">DEPARTAMENTO:</label>
-                       			<input class="form-control" id="departamento" name="departamento" type="text"/>
+                       			 <select class="form-control"name="MUNICIPIO" id="MUNICIPIO" > 
+<?php
+        $mysqli=conectar();
+      $consulta= "SELECT * FROM  municipio";
+      if ($resultado = $mysqli->query($consulta)) 
+      {
+        while ($fila = $resultado->fetch_row()) 
+        {         
+          echo "<option value=$fila[0]  >    $fila[2]  </option>";
+ 
+        }
+        $resultado->close();
+      }
+      $mysqli->close();     
+?>
+                             </select>
                        		</div>
                            <div class="form-group">
                        			<label for="TELEFONO">EDAD:</label>
