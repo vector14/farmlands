@@ -125,13 +125,50 @@
                           </div>
                            <div class="form-group">
                             <label for="CIUDAD">CIUDAD:</label>
-                            <input class="form-control" id="CIUDAD" name="CIUDAD" type="text" placeholder="CIUDAD" required pattern="[A-Za-z ]{2,30}"
-         title="Digite solo letras"/>
+                            <select class="form-control" id="CIUDAD" name="CIUDAD" type="text" placeholder="CIUDAD">
+                                    <option value="Bogotá Distrito Capital">Bogotá Distrito Capital</option>
+                                    <option value="Amazonas">Amazonas</option>
+                                    <option value="Antioquia">Antioquia</option>
+                                    <option value="Arauca">Arauca</option>
+                                    <option value="Atlántico">Atlántico</option>
+                                    <option value="Bolívar">Bolívar</option>
+                                    <option value="Boyacá">Boyacá</option>
+                                    <option value="Caldas">Caldas</option>
+                                    <option value="Caquetá">Caquetá</option>
+                                    <option value="Casanare">Casanare</option>
+                                    <option value="Cauca">Cauca</option>
+                                    <option value="Cesar">Cesar</option>
+                                    <option value="Cordoba">Cordoba</option>
+                                    <option value="Cundinamarca">Cundinamarca</option>
+                                    <option value="Chocó">Chocó</option>
+                                    <option value="Guainía">Guainía</option>
+                                    <option value="Guaviare">Guaviare</option>
+                                    <option value="Huila">Huila</option>
+                                    <option value="La Guajira">La Guajira</option>
+                                    <option value="Magdalena">Magdalena</option>
+                                    <option value="Meta">Meta</option>
+                                    <option value="Nariño">Nariño</option>
+                                    <option value="Norte de Santander">Norte de Santander</option>
+                                    <option value="Putumayo">Putumayo</option>
+                                    <option value="Quindio">Risaralda</option>
+                                    <option value="Santander">Santander</option>
+                                    <option value="San Andrés y Providencia">San Andrés y Providencia</option>
+                                    <option value="Sucre">Sucre</option>
+                                    <option value="Tolima">Tolima</option>
+                                    <option value="Valle del Cauca">Valle del Cauca</option>
+                                    <option value="Vaupés">Vaupés</option>
+                                    <option value="Vichada">Vichada</option>
+                                </select>
                           </div>
                            <div class="form-group">
                             <label for="TIPO_DOCUMENTO">TIPO_DOCUMENTO:</label>
-                            <input class="form-control" id="TIPO_DOCUMENTO" name="TIPO_DOCUMENTO" type="text" placeholder="TIPO_DOCUMENTO" required pattern="[A-Za-z.]{2,30}"
-         title="Digite solo letras"/>
+                            <select class="form-control" id="TIPO_DOCUMENTO" name="TIPO_DOCUMENTO" type="text" placeholder="TIPO DE DOCUMENTO">
+                                    <option value="CC">cédula de ciudadanía (CC)</option>
+                                    <option value="TI">tarjeta de identidad (TI)</option>
+                                    <option value="TP">tarjeta pasaporte (TP)</option>
+                                    <option value="RC">registro civil (RC)</option>
+				    <option value="CE">cédula de extranjería (CE)</option>
+				    </select>
                           </div>
                            <div class="form-group">
                             <label for="ENTIDAD_PROVENIENTE">ENTIDAD_PROVENIENTE:</label>
