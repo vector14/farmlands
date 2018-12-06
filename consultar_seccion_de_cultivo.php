@@ -37,7 +37,7 @@
         </div>
       </nav>
 
-      <table   class="table" >
+     <table   class="table" >
   <thead class="bg-success">
     <tr>
     
@@ -49,27 +49,27 @@
   </thead>
   <tbody>
   <?php
-		include("conexion.php");
+    include("conexion.php");
     $mysqli=conectar();
-			$consulta= "SELECT * FROM  seccion_de_cultivo";
-			if ($resultado = $mysqli->query($consulta)) 
-			{
-				while ($fila = $resultado->fetch_row()) 
-				{					
-					echo "<tr>";
-					echo "<td>$fila[0]</td><td>$fila[1]</td><td>$fila[2]</td><td>$fila[3]</td>";	
-          echo"<td>";		
-   				
-				    echo "<a  data-toggle='modal' data-target='#editUsu' data-ID_SECCION='" .$fila[0] ."' data-dimensiones='" .$fila[1] ."' data-ubicacion='" .$fila[2] ."' data-id_cultivo='" .$fila[3]."' class='btn btn-warning'><span class='glyphicon glyphicon-pencil'></span>Editar</a> ";			
-					echo "<a class='btn btn-danger' href='eliminar_seccion.php?ID_SECCION=" .$fila[0] ."'><span class='glyphicon glyphicon-remove'></span>Eliminar</a>";		
-					echo "</td>";
-					echo "</tr>";
-				}
-				$resultado->close();
-			}
-			$mysqli->close();			
-			
-	
+      $consulta= "SELECT * FROM  seccion_de_cultivo";
+      if ($resultado = $mysqli->query($consulta)) 
+      {
+        while ($fila = $resultado->fetch_row()) 
+        {         
+          echo "<tr>";
+          echo "<td>$fila[0]</td><td>$fila[1]</td><td>$fila[2]</td><td>$fila[3]</td>";  
+          echo"<td>";   
+          
+            echo "<a  data-toggle='modal' data-target='#editUsu' data-ID_SECCION='" .$fila[0] ."' data-dimensiones='" .$fila[1] ."' data-ubicacion='" .$fila[2] ."' data-id_cultivo='" .$fila[3]."' class='btn btn-warning'><span class='glyphicon glyphicon-pencil'></span>Editar</a> ";     
+          echo "<a class='btn btn-danger' href='eliminar_seccion.php?ID_SECCION=" .$fila[0] ."'><span class='glyphicon glyphicon-remove'></span>Eliminar</a>";    
+          echo "</td>";
+          echo "</tr>";
+        }
+        $resultado->close();
+      }
+      $mysqli->close();     
+      
+  
 
 ?>
 </table>
@@ -116,8 +116,40 @@
                           </div>
                           <div class="form-group">
                             <label for="APELLIDO">UBICACION:</label>
-                            <input class="form-control" id="UBICACION" name="UBICACION" type="text" placeholder="UBICACION" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras"/>
+                            <select class="form-control" id="UBICACION" name="UBICACION" type="text" placeholder="UBICACION">
+                                    <option value="Bogotá Distrito Capital">Bogotá Distrito Capital</option>
+                                    <option value="Amazonas">Amazonas</option>
+                                    <option value="Antioquia">Antioquia</option>
+                                    <option value="Arauca">Arauca</option>
+                                    <option value="Atlántico">Atlántico</option>
+                                    <option value="Bolívar">Bolívar</option>
+                                    <option value="Boyacá">Boyacá</option>
+                                    <option value="Caldas">Caldas</option>
+                                    <option value="Caquetá">Caquetá</option>
+                                    <option value="Casanare">Casanare</option>
+                                    <option value="Cauca">Cauca</option>
+                                    <option value="Cesar">Cesar</option>
+                                    <option value="Cordoba">Cordoba</option>
+                                    <option value="Cundinamarca">Cundinamarca</option>
+                                    <option value="Chocó">Chocó</option>
+                                    <option value="Guainía">Guainía</option>
+                                    <option value="Guaviare">Guaviare</option>
+                                    <option value="Huila">Huila</option>
+                                    <option value="La Guajira">La Guajira</option>
+                                    <option value="Magdalena">Magdalena</option>
+                                    <option value="Meta">Meta</option>
+                                    <option value="Nariño">Nariño</option>
+                                    <option value="Norte de Santander">Norte de Santander</option>
+                                    <option value="Putumayo">Putumayo</option>
+                                    <option value="Quindio">Risaralda</option>
+                                    <option value="Santander">Santander</option>
+                                    <option value="San Andrés y Providencia">San Andrés y Providencia</option>
+                                    <option value="Sucre">Sucre</option>
+                                    <option value="Tolima">Tolima</option>
+                                    <option value="Valle del Cauca">Valle del Cauca</option>
+                                    <option value="Vaupés">Vaupés</option>
+                                    <option value="Vichada">Vichada</option>
+                                </select>
                            </div>
                            <div class="form-group">
                             <label for="DIRECCION">ID_CULTIVO:</label>
@@ -158,29 +190,61 @@
                         <h4><img src="pl.png" width="30" height="30" class="d-inline-block align-top" alt="">Editar sección</h4>
                     </div>
                     <div class="modal-body">                      
-                       <form action="actualizar_seccion_de_cultivo.php" method="POST">                       		
-                       		        
+                       <form action="actualizar_seccion_de_cultivo.php" method="POST">                          
+                                  
                        <div class="form-group">
-                       			<label for="DOCUMENTO">ID SECCION:</label>
-                       			<input class="form-control" id="id_seccion" name="id_seccion" type="text"/></input>
-                       		</div>
-                       		<div class="form-group">
-                       			<label for="NOMBRE">DIMENCIONES:</label>
-                       			<input class="form-control" id="dimensiones" name="dimensiones" type="number" /></input>
-                       		</div>
-                       		<div class="form-group">
-                       			<label for="APELLIDO">UBICACION:</label>
-                       			<input class="form-control" id="ubicacion" name="ubicacion" type="text" required pattern="[A-Za-z]{2,30}"
-         title="Digite solo letras" /></input>
+                            <label for="DOCUMENTO">ID SECCION:</label>
+                            <input class="form-control" id="id_seccion" name="id_seccion" type="text"/></input>
+                          </div>
+                          <div class="form-group">
+                            <label for="NOMBRE">DIMENCIONES:</label>
+                            <input class="form-control" id="dimensiones" name="dimensiones" type="number" /></input>
+                          </div>
+                          <div class="form-group">
+                            <label for="APELLIDO">UBICACION:</label>
+                            <select class="form-control" id="UBICACION" name="UBICACION" type="text" placeholder="UBICACION">
+                                    <option value="Bogotá Distrito Capital">Bogotá Distrito Capital</option>
+                                    <option value="Amazonas">Amazonas</option>
+                                    <option value="Antioquia">Antioquia</option>
+                                    <option value="Arauca">Arauca</option>
+                                    <option value="Atlántico">Atlántico</option>
+                                    <option value="Bolívar">Bolívar</option>
+                                    <option value="Boyacá">Boyacá</option>
+                                    <option value="Caldas">Caldas</option>
+                                    <option value="Caquetá">Caquetá</option>
+                                    <option value="Casanare">Casanare</option>
+                                    <option value="Cauca">Cauca</option>
+                                    <option value="Cesar">Cesar</option>
+                                    <option value="Cordoba">Cordoba</option>
+                                    <option value="Cundinamarca">Cundinamarca</option>
+                                    <option value="Chocó">Chocó</option>
+                                    <option value="Guainía">Guainía</option>
+                                    <option value="Guaviare">Guaviare</option>
+                                    <option value="Huila">Huila</option>
+                                    <option value="La Guajira">La Guajira</option>
+                                    <option value="Magdalena">Magdalena</option>
+                                    <option value="Meta">Meta</option>
+                                    <option value="Nariño">Nariño</option>
+                                    <option value="Norte de Santander">Norte de Santander</option>
+                                    <option value="Putumayo">Putumayo</option>
+                                    <option value="Quindio">Risaralda</option>
+                                    <option value="Santander">Santander</option>
+                                    <option value="San Andrés y Providencia">San Andrés y Providencia</option>
+                                    <option value="Sucre">Sucre</option>
+                                    <option value="Tolima">Tolima</option>
+                                    <option value="Valle del Cauca">Valle del Cauca</option>
+                                    <option value="Vaupés">Vaupés</option>
+                                    <option value="Vichada">Vichada</option>
+                                </select>
                            </div>
                            <div class="form-group">
-                       			<label for="CIUDAD">ID CULTIVO:</label>
-                       		<input class="form-control" id="id_cultivo" name="id_cultivo" type="text" /></input>
+                            <label for="CIUDAD">ID CULTIVO:</label>
+                          <input class="form-control" id="id_cultivo" name="id_cultivo" type="text" /></input>
                            </div>
                            
 
-                  <input type="submit" class="btn btn-success">		
-                  <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>					
+                  <input type="submit" class="btn btn-success">   
+                  <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>          
                        </form>
                     </div>
                    
@@ -190,32 +254,32 @@
 
 
 
-	</div>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>		
-	<script>			 
-		  $('#editUsu').on('show.bs.modal', function (event) {
-		  var button = $(event.relatedTarget) // Button that triggered the modal
-		  var recipient1 = button.data('id_seccion')
-		  var recipient2 = button.data('dimensiones')
-		  var recipient3 = button.data('ubicacion')
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>   
+  <script>       
+      $('#editUsu').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) // Button that triggered the modal
+      var recipient1 = button.data('id_seccion')
+      var recipient2 = button.data('dimensiones')
+      var recipient3 = button.data('ubicacion')
       var recipient5 = button.data('id_cultivo')
     
-		   // Extract info from data-* attributes
-		  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-		  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-		 
-		  var modal = $(this)		 
-		  modal.find('.modal-body #id_seccion').val(recipient1)
-		  modal.find('.modal-body #dimensiones').val(recipient2)
-		  modal.find('.modal-body #ubicacion').val(recipient3)
+       // Extract info from data-* attributes
+      // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+      // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+     
+      var modal = $(this)    
+      modal.find('.modal-body #id_seccion').val(recipient1)
+      modal.find('.modal-body #dimensiones').val(recipient2)
+      modal.find('.modal-body #ubicacion').val(recipient3)
       modal.find('.modal-body #id_cultivo').val(recipient5)
      
-   		 
-		});
-		
-	</script>
-	
+       
+    });
+    
+  </script>
+  
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -224,11 +288,11 @@
 </html>
 
 <?php
-	}
-	else
-	{
-		?>
-		 <META HTTP-EQUIV="Refresh" CONTENT="0; URL=index.php">
-		 <?php
-	}
+  }
+  else
+  {
+    ?>
+     <META HTTP-EQUIV="Refresh" CONTENT="0; URL=index.php">
+     <?php
+  }
 ?>

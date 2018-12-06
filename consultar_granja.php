@@ -12,7 +12,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <link rel="shortcut icon" type="image/x-icon" href="assets/icons/favicon.ico"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="resources/all.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap.css">	
 
@@ -36,8 +36,7 @@
                 </ul>   
         </div>
       </nav>
-
-      <table   class="table" >
+<table   class="table" >
   <thead class="bg-success">
     <tr>
      
@@ -52,7 +51,7 @@
   </thead>
   <tbody>
   <?php
-		include("conexion.php");
+    include("conexion.php");
     $mysqli=conectar();
     if ($rol=='administrador'){
         $consulta= "SELECT * FROM  granja";
@@ -61,24 +60,24 @@
       
         $consulta= "SELECT * FROM  granja where GRANJERO='$DOCUMENTO'";
     }
-			
-			if ($resultado = $mysqli->query($consulta)) 
-			{
-				while ($fila = $resultado->fetch_row()) 
-				{					
-					echo "<tr>";
-					echo "<td>$fila[0]</td><td>$fila[1]</td><td>$fila[2]</td><td>$fila[3]</td><td>$fila[4]</td><td>$fila[5]</td><td>$fila[6]</td>";	
-					echo"<td>";						
-				    echo "<a  data-toggle='modal' data-target='#editUsu' data-id_granja ='" .$fila[0] ."' data-nombre='" .$fila[1] ."' data-terreno='" .$fila[2] ."' data-piso_termico='" .$fila[3]."' data-ubicacion='".$fila[4]."' data-prodcuto_especializado='".$fila[5]."' data-id_granjero='".$fila[6]."' class='btn btn-warning'><span class='glyphicon glyphicon-pencil'></span>Editar</a> ";			
-            echo "<a class='btn btn-danger' href='eliminar_granja.php?ID_GRANJA=" .$fila[0] ."'><span class='glyphicon glyphicon-remove'></span>Eliminar</a>";		
+      
+      if ($resultado = $mysqli->query($consulta)) 
+      {
+        while ($fila = $resultado->fetch_row()) 
+        {         
+          echo "<tr>";
+          echo "<td>$fila[0]</td><td>$fila[1]</td><td>$fila[2]</td><td>$fila[3]</td><td>$fila[4]</td><td>$fila[5]</td><td>$fila[6]</td>"; 
+          echo"<td>";           
+            echo "<a  data-toggle='modal' data-target='#editUsu' data-id_granja ='" .$fila[0] ."' data-nombre='" .$fila[1] ."' data-terreno='" .$fila[2] ."' data-piso_termico='" .$fila[3]."' data-ubicacion='".$fila[4]."' data-prodcuto_especializado='".$fila[5]."' data-id_granjero='".$fila[6]."' class='btn btn-warning'><span class='glyphicon glyphicon-pencil'></span>Editar</a> ";     
+            echo "<a class='btn btn-danger' href='eliminar_granja.php?ID_GRANJA=" .$fila[0] ."'><span class='glyphicon glyphicon-remove'></span>Eliminar</a>";    
             echo "</td>";
-					echo "</tr>";
-				}
-				$resultado->close();
-			}
-			$mysqli->close();			
-			
-	
+          echo "</tr>";
+        }
+        $resultado->close();
+      }
+      $mysqli->close();     
+      
+  
 
 ?>
   </tbody>
@@ -118,7 +117,7 @@
                        <form action="crear_granja.php" method="GET">                 
                           <div class="form-group">
                             <label for="NOMBRE">NOMBRE:</label>
-                            <input class="form-control" id="NOMBRE" name="NOMBRE" type="text" placeholder="NOMBRE" required pattern="[A-Za-z]{2,30}"
+                            <input class="form-control" id="NOMBRE" name="NOMBRE" type="text" placeholder="NOMBRE" required pattern="[A-Za-z ]{2,30}"
          title="Digite solo letras"/>
                           </div>
                           <div class="form-group">
@@ -127,11 +126,49 @@
                            </div>
                            <div class="form-group">
                             <label for="DIRECCION">PISO TERMICO:</label>
-                            <input class="form-control" id="PISO_TERMICO" name="PISO_TERMICO" type="text" placeholder="PISO_TERMICO"/>
+                            <select class="form-control" id="PISO_TERMICO" name="PISO_TERMICO" type="text" placeholder="PISO_TERMICO">
+                                    <option value="CALIDO">CALIDO</option>
+                                    <option value="TEMPLADO">TEMPLADO</option>
+                                    <option value="FRIO">FRIO</option>
+                                    <option value="PARAMO">PARAMO</option>
+                            </select>
                            </div>
                            <div class="form-group">
                             <label for="TELEFONO">UBICACION:</label>
-                            <input class="form-control" id="UBICACION" name="UBICACION" type="text" placeholder="UBICACION"/>
+                            <select class="form-control" id="UBICACION" name="UBICACION" type="text" placeholder="UBICACION">
+                                    <option value="Bogotá Distrito Capital">Bogotá Distrito Capital</option>
+                                    <option value="Amazonas">Amazonas</option>
+                                    <option value="Antioquia">Antioquia</option>
+                                    <option value="Arauca">Arauca</option>
+                                    <option value="Atlántico">Atlántico</option>
+                                    <option value="Bolívar">Bolívar</option>
+                                    <option value="Boyacá">Boyacá</option>
+                                    <option value="Caldas">Caldas</option>
+                                    <option value="Caquetá">Caquetá</option>
+                                    <option value="Casanare">Casanare</option>
+                                    <option value="Cauca">Cauca</option>
+                                    <option value="Cesar">Cesar</option>
+                                    <option value="Cordoba">Cordoba</option>
+                                    <option value="Cundinamarca">Cundinamarca</option>
+                                    <option value="Chocó">Chocó</option>
+                                    <option value="Guainía">Guainía</option>
+                                    <option value="Guaviare">Guaviare</option>
+                                    <option value="Huila">Huila</option>
+                                    <option value="La Guajira">La Guajira</option>
+                                    <option value="Magdalena">Magdalena</option>
+                                    <option value="Meta">Meta</option>
+                                    <option value="Nariño">Nariño</option>
+                                    <option value="Norte de Santander">Norte de Santander</option>
+                                    <option value="Putumayo">Putumayo</option>
+                                    <option value="Quindio">Risaralda</option>
+                                    <option value="Santander">Santander</option>
+                                    <option value="San Andrés y Providencia">San Andrés y Providencia</option>
+                                    <option value="Sucre">Sucre</option>
+                                    <option value="Tolima">Tolima</option>
+                                    <option value="Valle del Cauca">Valle del Cauca</option>
+                                    <option value="Vaupés">Vaupés</option>
+                                    <option value="Vichada">Vichada</option>
+                                </select>
                            </div>
                            <div class="form-group">
                             <label for="EDAD">PRODUCTO ESPECIALIZADO:</label>
@@ -185,32 +222,82 @@
                         <h4><img src="pl.png" width="30" height="30" class="d-inline-block align-top" alt="">Editar Granja</h4>
                     </div>
                     <div class="modal-body">                      
-                       <form action="actualizar_granja.php" method="POST">                       		
-                       		        
+                       <form action="actualizar_granja.php" method="POST">                          
+                                  
                        <div class="form-group">
-                       			<label for="DOCUMENTO">ID GRANJA:</label>
-                       			<input class="form-control" id="id_granja" name="id_granja" type="text" required/></input>
-                       		</div>
-                       		<div class="form-group">
-                       			<label for="NOMBRE">NOMBRE:</label>
-                       			<input class="form-control" id="nombre" name="nombre" type="text" required pattern="[A-Za-z 1-9]{2,30}"
-         title="Digite solo letras"/>
-                       		</div>
+                            <label for="DOCUMENTO">ID GRANJA:</label>
+                            <input class="form-control" id="id_granja" name="id_granja" type="text"/></input>
+                          </div>
+                          <div class="form-group">
+                            <label for="NOMBRE">NOMBRE:</label>
+                            <input class="form-control" id="nombre" name="nombre" type="text" required pattern="[A-Za-z ]{2,30}"
+         title="Digite solo letras"/></input>
+                          </div>
+                          <div class="form-group">
+                            <label for="APELLIDO">TERRENO:</label>
+                            <input class="form-control" id="terreno" name="terreno" type="number" /></input>
+                           </div>
                            <div class="form-group">
-                       			<label for="TELEFONO">PRODUCTO ESPECIALIZADO:</label>
-                       			<input class="form-control" id="prodcuto_especializado" name="prodcuto_especializado" type="text" required/>
-                       		</div>
+                            <label for="CIUDAD">PISO TERMICO:</label>
+                            <select class="form-control" id="PISO_TERMICO" name="PISO_TERMICO" type="text" placeholder="PISO_TERMICO">
+                                    <option value="CALIDO">CALIDO</option>
+                                    <option value="TEMPLADO">TEMPLADO</option>
+                                    <option value="FRIO">FRIO</option>
+                                    <option value="PARAMO">PARAMO</option>
+                            </select>
+                           </div>
+                           <div class="form-group">
+                            <label for="CORREO">UBICACION:</label>
+                            <select class="form-control" id="UBICACION" name="UBICACION" type="text" placeholder="UBICACION">
+                                    <option value="Bogotá Distrito Capital">Bogotá Distrito Capital</option>
+                                    <option value="Amazonas">Amazonas</option>
+                                    <option value="Antioquia">Antioquia</option>
+                                    <option value="Arauca">Arauca</option>
+                                    <option value="Atlántico">Atlántico</option>
+                                    <option value="Bolívar">Bolívar</option>
+                                    <option value="Boyacá">Boyacá</option>
+                                    <option value="Caldas">Caldas</option>
+                                    <option value="Caquetá">Caquetá</option>
+                                    <option value="Casanare">Casanare</option>
+                                    <option value="Cauca">Cauca</option>
+                                    <option value="Cesar">Cesar</option>
+                                    <option value="Cordoba">Cordoba</option>
+                                    <option value="Cundinamarca">Cundinamarca</option>
+                                    <option value="Chocó">Chocó</option>
+                                    <option value="Guainía">Guainía</option>
+                                    <option value="Guaviare">Guaviare</option>
+                                    <option value="Huila">Huila</option>
+                                    <option value="La Guajira">La Guajira</option>
+                                    <option value="Magdalena">Magdalena</option>
+                                    <option value="Meta">Meta</option>
+                                    <option value="Nariño">Nariño</option>
+                                    <option value="Norte de Santander">Norte de Santander</option>
+                                    <option value="Putumayo">Putumayo</option>
+                                    <option value="Quindio">Risaralda</option>
+                                    <option value="Santander">Santander</option>
+                                    <option value="San Andrés y Providencia">San Andrés y Providencia</option>
+                                    <option value="Sucre">Sucre</option>
+                                    <option value="Tolima">Tolima</option>
+                                    <option value="Valle del Cauca">Valle del Cauca</option>
+                                    <option value="Vaupés">Vaupés</option>
+                                    <option value="Vichada">Vichada</option>
+                                </select>
+                           </div>
+                           <div class="form-group">
+                            <label for="TELEFONO">PRODUCTO ESPECIALIZADO:</label>
+                            <input class="form-control" id="prodcuto_especializado" name="prodcuto_especializado" type="text"/>
+                          </div>
                    
 
                               <div class="form-group">
-                       			<label for="TELEFONO">ID GRANJERO:</label>
-                       			<input class="form-control" id="id_granjero" name="id_granjero" type="text" required/>
-                       		</div>
+                            <label for="TELEFONO">ID GRANJERO:</label>
+                            <input class="form-control" id="id_granjero" name="id_granjero" type="text"/>
+                          </div>
 
                         
 
-                  <input type="submit" class="btn btn-success">	
-                  <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>						
+                  <input type="submit" class="btn btn-success"> 
+                  <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>            
                        </form>
                     </div>
                     
@@ -220,47 +307,47 @@
 
 
 
-	</div>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>		
-	<script>			 
-		  $('#editUsu').on('show.bs.modal', function (event) {
-		  var button = $(event.relatedTarget) // Button that triggered the modal
-		  var recipient1 = button.data('id_granja')
-		  var recipient2 = button.data('nombre')
-		  var recipient3 = button.data('terreno')
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>   
+  <script>       
+      $('#editUsu').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) // Button that triggered the modal
+      var recipient1 = button.data('id_granja')
+      var recipient2 = button.data('nombre')
+      var recipient3 = button.data('terreno')
       var recipient5 = button.data('piso_termico')
       var recipient6 = button.data('ubicacion')
       var recipient7 = button.data('prodcuto_especializado')
       var recipient8 = button.data('id_granjero')
-		   // Extract info from data-* attributes
-		  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-		  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-		 
-		  var modal = $(this)		 
-		  modal.find('.modal-body #id_granja').val(recipient1)
-		  modal.find('.modal-body #nombre').val(recipient2)
-		  modal.find('.modal-body #terreno').val(recipient3)
+       // Extract info from data-* attributes
+      // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+      // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+     
+      var modal = $(this)    
+      modal.find('.modal-body #id_granja').val(recipient1)
+      modal.find('.modal-body #nombre').val(recipient2)
+      modal.find('.modal-body #terreno').val(recipient3)
       modal.find('.modal-body #piso_termico').val(recipient5)
       modal.find('.modal-body #ubicacion').val(recipient6)
       modal.find('.modal-body #prodcuto_especializado').val(recipient7)
       modal.find('.modal-body #id_granjero').val(recipient8)
-		});
-		
-	</script>
+    });
+    
+  </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="resources/jquery-3.3.1.slim.min.js"></script>
+    <script src="resources/popper.min.js"></script>
+    <script src="resources/bootstrap.min.js"></script>
   </body>
 </html>
 <?php
-	}
-	else
-	{
-		?>
-		 <META HTTP-EQUIV="Refresh" CONTENT="0; URL=index.php">
-		 <?php
-	}
+  }
+  else
+  {
+    ?>
+     <META HTTP-EQUIV="Refresh" CONTENT="0; URL=index.php">
+     <?php
+  }
 ?>

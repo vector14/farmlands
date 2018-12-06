@@ -12,7 +12,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <link rel="shortcut icon" type="image/x-icon" href="assets/icons/favicon.ico"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="resources/all.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap.css">
 
@@ -37,8 +37,8 @@
         </div>
       </nav>
 
-      <table   class="table" >
- <thead class="bg-success">
+     <table   class="table" >
+  <thead class="bg-success">
     <tr>
       
       <th scope="col">ID MUESTRA</th>
@@ -54,7 +54,7 @@
   </thead>
   <tbody>
   <?php
-		include("conexion.php");
+    include("conexion.php");
     $mysqli=conectar();
      if ($rol=='administrador'){
        $consulta= "SELECT * FROM  muestra_prueba";
@@ -63,30 +63,30 @@
       
         $consulta= "SELECT * FROM  muestra_prueba where GRANJERO='$DOCUMENTO'";
     }
-			
-			if ($resultado = $mysqli->query($consulta)) 
-			{
-				while ($fila = $resultado->fetch_row()) 
-				{					
-					echo "<tr>";
-					echo "<td>$fila[0]</td><td>$fila[1]</td><td>$fila[2]</td><td>$fila[3]</td><td>$fila[4]</td><td>$fila[5]</td><td>$fila[6]</td><td>$fila[7]</td><td>$fila[8]</td>";	
-					echo"<td>";						
-				    echo "<a  data-toggle='modal' data-target='#editUsu' data-ID_MUESTRA='" .$fila[0] ."' data-ph='" .$fila[1] ."' data-muestra_a='" .$fila[2] ."' data-muestra_m='" .$fila[3]."' data-humedad='".$fila[4]."' data-presion_atmosferica='".$fila[5]."' data-fecha_muestra='".$fila[6]."' data-color_hoja='".$fila[7]."' data-seccion_cultivo='".$fila[8]."' class='btn btn-warning'><span class='glyphicon glyphicon-pencil'></span>Editar</a> ";			
-					echo "<a class='btn btn-danger' href='eliminar_muestra-pruebas.php?ID_MUESTRA=" .$fila[0] ."'><span class='glyphicon glyphicon-remove'></span>Eliminar</a>";		
-					echo "</td>";
-					echo "</tr>";
-				}
-				$resultado->close();
-			}
-			$mysqli->close();			
-			
-	
+      
+      if ($resultado = $mysqli->query($consulta)) 
+      {
+        while ($fila = $resultado->fetch_row()) 
+        {         
+          echo "<tr>";
+          echo "<td>$fila[0]</td><td>$fila[1]</td><td>$fila[2]</td><td>$fila[3]</td><td>$fila[4]</td><td>$fila[5]</td><td>$fila[6]</td><td>$fila[7]</td><td>$fila[8]</td>"; 
+          echo"<td>";           
+            echo "<a  data-toggle='modal' data-target='#editUsu' data-ID_MUESTRA='" .$fila[0] ."' data-ph='" .$fila[1] ."' data-muestra_a='" .$fila[2] ."' data-muestra_m='" .$fila[3]."' data-humedad='".$fila[4]."' data-presion_atmosferica='".$fila[5]."' data-fecha_muestra='".$fila[6]."' data-color_hoja='".$fila[7]."' data-seccion_cultivo='".$fila[8]."' class='btn btn-warning'><span class='glyphicon glyphicon-pencil'></span>Editar</a> ";      
+          echo "<a class='btn btn-danger' href='eliminar_muestra - pruebas.php?ID_MUESTRA=" .$fila[0] ."'><span class='glyphicon glyphicon-remove'></span>Eliminar</a>";    
+          echo "</td>";
+          echo "</tr>";
+        }
+        $resultado->close();
+      }
+      $mysqli->close();     
+      
+  
 
 ?>
   </tbody>
 </table>
 
-<table class="table" >
+<table   class="table" >
 
 <tr>
   
@@ -118,7 +118,7 @@
                         <h4><img src="pl.png" width="30" height="30" class="d-inline-block align-top" alt="">Nueva muestra</h4>                       
                     </div>
                     <div class="modal-body">
-                       <form action="crear_muestra-pruebas.php" method="GET">                 
+                       <form action="crear_muestra - pruebas.php" method="GET">                 
                           <div class="form-group">
                             <label for="PH">PH:</label>
                             <input class="form-control" id="PH" name="PH" type="text" placeholder="PH" required pattern="[0-9.]{1,25}"
@@ -157,7 +157,7 @@
       {
         while ($fila = $resultado->fetch_row()) 
         {         
-          echo "<option value=$fila[0]  >    $fila[0]  </option>";
+          echo "<option value=$fila[0]  >    $fila[2]  </option>";
  
         }
         $resultado->close();
@@ -232,7 +232,7 @@
       {
         while ($fila = $resultado->fetch_row()) 
         {         
-          echo "<option value=$fila[0]  >    $fila[0]  </option>";
+          echo "<option value=$fila[0]  >    $fila[2]  </option>";
  
         }
         $resultado->close();
@@ -244,8 +244,8 @@
                            </div>
                         
 
-                  <input type="submit" class="btn btn-success">		
-                  <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>					
+                  <input type="submit" class="btn btn-success">   
+                  <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>          
                        </form>
                     </div>
                    
@@ -255,15 +255,15 @@
 
 
 
-	</div>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>		
-	<script>			 
-		  $('#editUsu').on('show.bs.modal', function (event) {
-		  var button = $(event.relatedTarget) // Button that triggered the modal
-		  var recipient1 = button.data('id_muestra')
-		  var recipient2 = button.data('ph')
-		  var recipient3 = button.data('temperatura_a')
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>   
+  <script>       
+      $('#editUsu').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) // Button that triggered the modal
+      var recipient1 = button.data('id_muestra')
+      var recipient2 = button.data('ph')
+      var recipient3 = button.data('temperatura_a')
       var recipient5 = button.data('temmperatura_m')
       var recipient6 = button.data('humedad')
       var recipient7 = button.data('presion_atmosferica')
@@ -271,14 +271,14 @@
       var recipient9 = button.data('color_hoja')
       var recipient10 = button.data('seccion_cultivo')
 
-		   // Extract info from data-* attributes
-		  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-		  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-		 
-		  var modal = $(this)		 
-		  modal.find('.modal-body #id_muestra').val(recipient1)
-		  modal.find('.modal-body #ph').val(recipient2)
-		  modal.find('.modal-body #temperatura_a').val(recipient3)
+       // Extract info from data-* attributes
+      // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+      // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+     
+      var modal = $(this)    
+      modal.find('.modal-body #id_muestra').val(recipient1)
+      modal.find('.modal-body #ph').val(recipient2)
+      modal.find('.modal-body #temperatura_a').val(recipient3)
       modal.find('.modal-body #temmperatura_m').val(recipient5)
       modal.find('.modal-body #humedad').val(recipient6)
       modal.find('.modal-body #presion_atmosferica').val(recipient7)
@@ -286,20 +286,20 @@
       modal.find('.modal-body #color_hoja').val(recipient9)
       modal.find('.modal-body #seccion_cultivo').val(recipient10)
       
-   		 
-   		 
-		});
-		
-	</script>
+       
+       
+    });
+    
+  </script>
   </body>
 </html>
 
 <?php
-	}
-	else
-	{
-		?>
-		 <META HTTP-EQUIV="Refresh" CONTENT="0; URL=index.php">
-		 <?php
-	}
+  }
+  else
+  {
+    ?>
+     <META HTTP-EQUIV="Refresh" CONTENT="0; URL=index.php">
+     <?php
+  }
 ?>

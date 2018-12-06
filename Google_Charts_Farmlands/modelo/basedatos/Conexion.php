@@ -3,9 +3,9 @@
 class Conexion {
 
     public static function conectar() {
-        $localhost="den1.mysql5.gear.host";
+        $localhost="den1.mysql6.gear.host";
         $usuario="farmlandsdb";
-        $contraseña="Gf7lq?P5~5oH";
+        $contraseña="La5b_XkUy6_o";
         $basededatos="farmlandsdb";
         $cnn = new PDO('mysql:host=den1.mysql5.gear.host;port=3306;dbname=farmlandsdb', 'farmlandsdb', 'Gf7lq?P5~5oH');
         $cnn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
