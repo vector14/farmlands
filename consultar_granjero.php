@@ -113,15 +113,51 @@ $mysqli=conectar();
                        		</div>
                            <div class="form-group">
                             <label for="TELEFONO">TIPO DOCUMENTO:</label>
-                            <input class="form-control" id="TIPO_DOCUMENTO" name="TIPO_DOCUMENTO" type="text" placeholder="TIPO_DOCUMENTO"/>
+                            <select class="form-control" id="TIPO_DOCUMENTO" name="TIPO_DOCUMENTO" type="text" placeholder="TIPO DE DOCUMENTO">
+                                    <option value="CC">cédula de ciudadanía (CC)</option>
+                                    <option value="TI">tarjeta de identidad (TI)</option>
+                                    <option value="TP">tarjeta pasaporte (TP)</option>
+                                    <option value="RC">registro civil (RC)</option>
+				    <option value="CE">cédula de extranjería (CE)</option>
+				    </select>
                            </div>
                            <div class="form-group">
-                            <label for="EDAD">MUNICIPIO:</label>
-                            <input class="form-control" id="MUNICIPIO" name="MUNICIPIO" type="text" placeholder="MUNICIPIO"/>
+                            <label for="EDAD">DEPARTAMENTO:</label>
+                            <select class="form-control"name="DEPARTAMENTO" id="DEPARTAMENTO" > 
+<?php
+        $mysqli=conectar();
+      $consulta= "SELECT * FROM  departamento";
+      if ($resultado = $mysqli->query($consulta)) 
+      {
+        while ($fila = $resultado->fetch_row()) 
+        {         
+          echo "<option value=$fila[0]  >    $fila[1]  </option>";
+ 
+        }
+        $resultado->close();
+      }
+      $mysqli->close();     
+?>
+                             </select>
                           </div>
                            <div class="form-group">
-                            <label for="CIUDAD">DEPARTAMENTO:</label>
-                            <input class="form-control" id="DEPARTAMENTO" name="DEPARTAMENTO" type="text" placeholder="DEPARTAMENTO"/>
+                            <label for="CIUDAD">MUNICIPIO:</label>
+                             <select class="form-control"name="MUNICIPIO" id="MUNICIPIO" > 
+<?php
+        $mysqli=conectar();
+      $consulta= "SELECT * FROM  municipio";
+      if ($resultado = $mysqli->query($consulta)) 
+      {
+        while ($fila = $resultado->fetch_row()) 
+        {         
+          echo "<option value=$fila[0]  >    $fila[2]  </option>";
+ 
+        }
+        $resultado->close();
+      }
+      $mysqli->close();     
+?>
+                             </select>
                           </div>
                            <div class="form-group">
                             <label for="DIRECCION">EDAD:</label>
@@ -163,15 +199,51 @@ $mysqli=conectar();
                            </div>
                            <div class="form-group">
                        			<label for="CORREO">TIPO DE DOCUMENTO:</label>
-                       			<input class="form-control" id="tipo_documento" name="tipo_documento" type="text" />
+                       			<select class="form-control" id="TIPO_DOCUMENTO" name="TIPO_DOCUMENTO" type="text" placeholder="TIPO DE DOCUMENTO">
+                                    <option value="CC">cédula de ciudadanía (CC)</option>
+                                    <option value="TI">tarjeta de identidad (TI)</option>
+                                    <option value="TP">tarjeta pasaporte (TP)</option>
+                                    <option value="RC">registro civil (RC)</option>
+				    <option value="CE">cédula de extranjería (CE)</option>
+				    </select>
                            </div>
                            <div class="form-group">
-                       			<label for="">MUNICIPIO:</Label>
-                       			<input class="form-control" id="municipio" name="municipio" type="text"/>
+                       			<label for="">DEPARTAMENTO:</Label>
+                       			<select class="form-control"name="DEPARTAMENTO" id="DEPARTAMENTO" > 
+<?php
+        $mysqli=conectar();
+      $consulta= "SELECT * FROM  departamento";
+      if ($resultado = $mysqli->query($consulta)) 
+      {
+        while ($fila = $resultado->fetch_row()) 
+        {         
+          echo "<option value=$fila[0]  >    $fila[1]  </option>";
+ 
+        }
+        $resultado->close();
+      }
+      $mysqli->close();     
+?>
+                             </select>
                        		</div>
                            <div class="form-group">
-                       			<label for="TELEFONO">DEPARTAMENTO:</label>
-                       			<input class="form-control" id="departamento" name="departamento" type="text"/>
+                       			<label for="TELEFONO">MUNICIPIO:</label>
+                       			<select class="form-control"name="MUNICIPIO" id="MUNICIPIO" > 
+<?php
+        $mysqli=conectar();
+      $consulta= "SELECT * FROM  municipio";
+      if ($resultado = $mysqli->query($consulta)) 
+      {
+        while ($fila = $resultado->fetch_row()) 
+        {         
+          echo "<option value=$fila[0]  >    $fila[2]  </option>";
+ 
+        }
+        $resultado->close();
+      }
+      $mysqli->close();     
+?>
+                             </select>
                        		</div>
                            <div class="form-group">
                        			<label for="TELEFONO">EDAD:</label>
