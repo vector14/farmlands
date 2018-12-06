@@ -92,7 +92,7 @@
 				<div class="col-xs-12 col-sm-4 col-md-4">
 					<h5>Manuales</h5>
 					<ul class="list-unstyled quick-links">
-						<li><a href="pdf/MANUAL_DE_USUARIO.pdf" target="_blank"><i class="fa fa-angle-double-right"></i>Manual de usuario</a></li>
+						<li><a href="pdf/manual_de_usuario[1].pdf" target="_blank"><i class="fa fa-angle-double-right"></i>Manual de usuario</a></li>
 						<li><a href="pdf/MANUAL_TÉCNICO.pdf" target="_blank"><i class="fa fa-angle-double-right"></i>Manual Tecnico</a></li>
 						<li><a href="https://www.youtube.com/watch?v=818_G3AKLso&list=PLGR-Zuae2elGIypc87uxQnTWMgmJLU0UM"><i class="fa fa-angle-double-right" target="_blank"></i>Videos Explicativos</a></li>
 					</ul>
